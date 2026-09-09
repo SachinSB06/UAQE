@@ -1,0 +1,26 @@
+{
+  "configured_preprocessing_mode": "rgb_0_1",
+  "input_layout": "NCHW",
+  "resize_dimensions": [
+    128,
+    128
+  ],
+  "interpolation": "Image.Resampling.BILINEAR",
+  "crop_behavior": "None (direct bilinear resize)",
+  "color_channel_order": "RGB",
+  "normalization": {
+    "mean": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "std": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "value_range": "[0, 1]",
+  "dtype": "float32",
+  "preprocessing_status": "VERIFIED"
+}

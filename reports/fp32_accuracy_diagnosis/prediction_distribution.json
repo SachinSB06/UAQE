@@ -1,0 +1,29 @@
+{
+  "ground_truth_distribution": {
+    "Clean": 33,
+    "Bridge": 32,
+    "CMP": 30,
+    "Crack": 31,
+    "LER": 30,
+    "Open": 30,
+    "Particle": 30,
+    "Class_7": 0,
+    "VIA": 30,
+    "Other": 50
+  },
+  "predicted_distribution": {
+    "Clean": 67,
+    "Bridge": 27,
+    "CMP": 36,
+    "Crack": 14,
+    "LER": 21,
+    "Open": 17,
+    "Particle": 15,
+    "Class_7": 12,
+    "VIA": 15,
+    "Other": 72
+  },
+  "mapping_analysis": {
+    "comment": "Analysis of predictions distribution to check if the class mappings are correct or shifted."
+  }
+}

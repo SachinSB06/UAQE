@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "stm32f4",
+  "display_name": "STM32F4",
+  "hardware_class": "EMBEDDED",
+  "ram_bytes": 196608,
+  "flash_bytes": 1048576,
+  "storage_bytes": null,
+  "tensor_memory_bytes": 131072,
+  "runtime": "tflite-micro",
+  "default_runtime": "tflite-micro",
+  "supported_runtimes": ["tflite-micro"],
+  "supported_precisions": ["INT8"],
+  "max_model_size_bytes": 524288,
+  "preferred_export_formats": ["TFLITE", "BIN", "H_HEADER"],
+  "clock_speed_hz": null,
+  "fpga_resources": null,
+  "constraints": [
+    "Single-core Arm Cortex-M4 with hardware FPU (single-precision only); no support for double-precision or dedicated ML accelerators.",
+    "192 KB SRAM total across multiple memory blocks; tensor arena must fit within a contiguous usable region.",
+    "1 MB on-chip flash limits total model size well below general-purpose MCU targets."
+  ]
+}

@@ -1,0 +1,15 @@
+schema_version: "1.0"
+environment: "development"     # development | staging | production
+logging:
+  min_level: "INFO"            # DEBUG | INFO | WARNING | ERROR | CRITICAL
+  sink: "file"                 # file | stdout | both
+  json_lines: true
+execution:
+  parallelism:
+    quantization: false
+    compression: false
+    benchmark: true
+  max_concurrent_runs: 4
+telemetry:
+  enabled: false
+  endpoint: null

@@ -1,0 +1,6 @@
+target_sparsity,parameter_count,estimated_latency_ms,validation_accuracy,size_constraint,latency_constraint,accuracy_constraint,fine_tune_status,accepted
+0.02,12130,0.01213,UNKNOWN,PASS,PASS,PASS,BLOCKED — no independent training/validation data,True
+0.04,11882,0.011882,UNKNOWN,PASS,PASS,PASS,BLOCKED — no independent training/validation data,True
+0.06,11634,0.011634,UNKNOWN,PASS,PASS,PASS,BLOCKED — no independent training/validation data,True
+0.08,11386,0.011386,UNKNOWN,PASS,PASS,PASS,BLOCKED — no independent training/validation data,True
+0.1,11138,0.011138,UNKNOWN,PASS,PASS,PASS,BLOCKED — no independent training/validation data,True

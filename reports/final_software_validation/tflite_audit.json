@@ -1,0 +1,88 @@
+{
+  "file_size_bytes": 1856864,
+  "tensor_count": 350,
+  "operator_count": 204,
+  "operator_types": {
+    "QUANTIZE": 1,
+    "TRANSPOSE": 1,
+    "PAD": 5,
+    "CONV_2D": 41,
+    "MUL": 47,
+    "ADD": 25,
+    "MINIMUM": 28,
+    "RELU": 28,
+    "DEPTHWISE_CONV_2D": 11,
+    "MEAN": 10,
+    "SHAPE": 1,
+    "STRIDED_SLICE": 1,
+    "PACK": 1,
+    "RESHAPE": 1,
+    "FULLY_CONNECTED": 2,
+    "DEQUANTIZE": 1
+  },
+  "FLOAT32_tensors": 2,
+  "FLOAT16_tensors": 0,
+  "INT8_tensors": 284,
+  "INT32_tensors": 64,
+  "quantized_tensors": 230,
+  "sample_quantization_parameters": {
+    "arith.constant4": {
+      "scale": 0.0645940750837326,
+      "zero_point": 112
+    },
+    "arith.constant41": {
+      "scale": 0.002851215424016118,
+      "zero_point": -128
+    },
+    "arith.constant42": {
+      "scale": 0.010471382178366184,
+      "zero_point": 32
+    },
+    "arith.constant43": {
+      "scale": 0.010763444006443024,
+      "zero_point": 34
+    },
+    "arith.constant44": {
+      "scale": 0.0043188720010221004,
+      "zero_point": -105
+    },
+    "arith.constant45": {
+      "scale": 0.009679839015007019,
+      "zero_point": 24
+    },
+    "arith.constant46": {
+      "scale": 0.014509981498122215,
+      "zero_point": 58
+    },
+    "arith.constant47": {
+      "scale": 0.012921774759888649,
+      "zero_point": 50
+    },
+    "arith.constant48": {
+      "scale": 0.01110135205090046,
+      "zero_point": 37
+    },
+    "arith.constant49": {
+      "scale": 0.010591310448944569,
+      "zero_point": 33
+    }
+  },
+  "input_details": {
+    "name": "serving_default_args_0:0",
+    "shape": [
+      1,
+      3,
+      128,
+      128
+    ],
+    "dtype": "<class 'numpy.float32'>"
+  },
+  "output_details": {
+    "name": "PartitionedCall_1:0",
+    "shape": [
+      1,
+      10
+    ],
+    "dtype": "<class 'numpy.float32'>"
+  }
+}

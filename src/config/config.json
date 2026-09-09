@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "app_name": "Universal AI Quantization Engine",
+  "default_run_id_prefix": "run",
+  "workdir_path": "workdir",
+  "outputs_path": "outputs",
+  "reports_path": "reports",
+  "logs_path": "logs",
+  "hardware_profiles_path": "hardware_profiles",
+  "plugins_path": "plugins",
+  "large_model_threshold_mb": 50,
+  "on_error": "ABORT"
+}

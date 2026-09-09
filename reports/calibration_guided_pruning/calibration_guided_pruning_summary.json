@@ -1,0 +1,8 @@
+{
+  "status": "BLOCKED",
+  "reason": "CALIBRATION DATA = UNAVAILABLE",
+  "activation_collection": "VERIFIED",
+  "closed_form_reconstruction": "VERIFIED",
+  "batchnorm_recalibration": "VERIFIED",
+  "proxy_metrics": "VERIFIED"
+}

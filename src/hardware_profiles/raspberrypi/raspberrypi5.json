@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "raspberrypi5",
+  "display_name": "Raspberry Pi 5",
+  "hardware_class": "RASPBERRY_PI",
+  "ram_bytes": 8589934592,
+  "flash_bytes": null,
+  "storage_bytes": 68719476736,
+  "tensor_memory_bytes": 4294967296,
+  "runtime": "tflite-runtime",
+  "default_runtime": "tflite-runtime",
+  "supported_runtimes": ["tflite-runtime", "onnxruntime", "torch"],
+  "supported_precisions": ["INT8", "FP16", "MIXED"],
+  "max_model_size_bytes": 1073741824,
+  "preferred_export_formats": ["TFLITE", "ONNX"],
+  "clock_speed_hz": 2400000000,
+  "fpga_resources": null,
+  "constraints": [
+    "Quad-core Cortex-A76 at 2.4 GHz; no dedicated NPU, so larger models rely on NEON-accelerated CPU inference.",
+    "ram_bytes and storage_bytes reflect the minimum shipped 8 GB RAM / 64 GB microSD configuration; higher-RAM SKUs exist.",
+    "storage_bytes represents removable microSD/NVMe (via M.2 HAT) capacity, not onboard flash."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "environment": {
+    "cpu": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+    "ram_total_gb": 15.69,
+    "os": "Windows 11",
+    "python_version": "3.13.7",
+    "tensorflow_version": "2.21.0",
+    "onnxruntime_version": "1.28.0",
+    "thread_count": 1,
+    "warmup_runs": 10,
+    "measured_runs": 100
+  },
+  "fp32": {
+    "mean_ms": 1.3531110000621993,
+    "median_ms": 1.1460999994596932,
+    "p95_ms": 2.367810000578174,
+    "min_ms": 1.0426999997434905,
+    "max_ms": 3.3743000003596535,
+    "throughput_ips": 739.0376694550797,
+    "benchmark_status": "PASS"
+  },
+  "onnx": {
+    "mean_ms": 1.8589730000712734,
+    "median_ms": 1.446350000151142,
+    "p95_ms": 3.4462200006601043,
+    "min_ms": 1.1967999998887535,
+    "max_ms": 9.217000000717235,
+    "throughput_ips": 537.9314277085573,
+    "benchmark_status": "PASS"
+  },
+  "tflite": {
+    "mean_ms": 2.3097939998842776,
+    "median_ms": 2.1102499995322432,
+    "p95_ms": 3.319480000027397,
+    "min_ms": 1.7597999994904967,
+    "max_ms": 4.270800000085728,
+    "throughput_ips": 432.93904133879505,
+    "benchmark_status": "PASS"
+  },
+  "speedup_onnx_vs_fp32": 0.7278809321116125,
+  "speedup_tflite_vs_fp32": 0.5858145791919068
+}

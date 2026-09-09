@@ -1,0 +1,14 @@
+{
+  "artifact_path": "output\\phase_c2\\models\\mobilenetv3_sem_9class_qat_int8.tflite",
+  "artifact_sha256": "10d51d4f243c554734e7347f9010297fb182a64c4ad89d5551e24830846dab1d",
+  "artifact_size_bytes": 1855816,
+  "dedicated_benchmark": {
+    "mean_ms": 43.39815700004692,
+    "median_ms": 39.45075000228826,
+    "p95_ms": 62.27435999098813,
+    "throughput_ips": 23.042453162214212,
+    "threads": 2,
+    "warmup_runs": 10,
+    "measured_runs": 100
+  }
+}

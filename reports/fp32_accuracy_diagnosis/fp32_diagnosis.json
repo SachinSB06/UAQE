@@ -1,0 +1,10 @@
+{
+  "reference_model_sha256": "616f53f5ef2a66e7028e075d2af204b20067ededffdf550a7696fdc476242711",
+  "existing_evaluator_fp32_accuracy": 0.3716,
+  "independent_fp32_accuracy": 0.3716216216216216,
+  "accuracy_difference": 2.162162162161474e-05,
+  "primary_root_cause": "GENUINELY LOW FP32 ACCURACY",
+  "secondary_issues": [],
+  "confidence_level": "HIGH",
+  "recommended_next_action": "Recover legitimate training data/checkpoint or replace/retrain the base model."
+}

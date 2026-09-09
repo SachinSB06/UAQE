@@ -1,0 +1,19 @@
+{
+  "reconstruction_strategy": "calibration_guided_reconstruction",
+  "solver": "numpy.linalg.lstsq (closed-form regularized least-squares)",
+  "lambda_regularization": 0.0001,
+  "runs": {
+    "R1": {
+      "pruning_ratio": 0.01,
+      "reconstruction_error": 0.0,
+      "layers_reconstructed": [],
+      "status": "baseline_safeguard_fallback"
+    },
+    "R2": {
+      "pruning_ratio": 0.02,
+      "reconstruction_error": 0.0,
+      "layers_reconstructed": [],
+      "status": "baseline_safeguard_fallback"
+    }
+  }
+}

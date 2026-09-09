@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "stm32h7",
+  "display_name": "STM32H7",
+  "hardware_class": "EMBEDDED",
+  "ram_bytes": 1048576,
+  "flash_bytes": 2097152,
+  "storage_bytes": null,
+  "tensor_memory_bytes": 524288,
+  "runtime": "tflite-micro",
+  "default_runtime": "tflite-micro",
+  "supported_runtimes": ["tflite-micro"],
+  "supported_precisions": ["INT8", "INT4"],
+  "max_model_size_bytes": 1572864,
+  "preferred_export_formats": ["TFLITE", "BIN", "H_HEADER"],
+  "clock_speed_hz": null,
+  "fpga_resources": null,
+  "constraints": [
+    "Single-core Arm Cortex-M7 with double-precision FPU and higher clock rate than the M4-class STM32F4, enabling INT4 support.",
+    "1 MB SRAM across tightly-coupled and system memory regions; tensor arena allocation must account for D-Cache alignment.",
+    "No dedicated ML accelerator; all inference runs on the Cortex-M7 core via CMSIS-NN-optimized TFLite Micro kernels."
+  ]
+}

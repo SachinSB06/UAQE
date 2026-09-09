@@ -1,0 +1,9 @@
+{
+  "experiment": "fp32_baseline",
+  "status": "FAILED",
+  "returncode": 1,
+  "error_msg": "Subprocess exited with non-zero code.",
+  "overrides": {
+    "quantization.default_precision": "FP32"
+  }
+}

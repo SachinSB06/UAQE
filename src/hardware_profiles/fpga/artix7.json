@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "artix7",
+  "display_name": "Xilinx Artix-7",
+  "hardware_class": "FPGA",
+  "ram_bytes": null,
+  "flash_bytes": null,
+  "storage_bytes": null,
+  "tensor_memory_bytes": 2097152,
+  "runtime": "bare-metal-hdl",
+  "default_runtime": "bare-metal-hdl",
+  "supported_runtimes": ["bare-metal-hdl"],
+  "supported_precisions": ["INT8", "INT4"],
+  "max_model_size_bytes": 4194304,
+  "preferred_export_formats": ["MEM", "HEX", "BIN"],
+  "clock_speed_hz": 100000000,
+  "fpga_resources": {
+    "logic_cells": 101440,
+    "bram_kb": 4860,
+    "dsp_slices": 240,
+    "lut_count": 63400
+  },
+  "constraints": [
+    "No native floating-point units; FP32/FP16 layers must be fully quantized before export.",
+    "Recurrent layers (LSTM/GRU) unsupported in v1 HDL backend."
+  ]
+}

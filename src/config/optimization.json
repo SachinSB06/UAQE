@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "objectives": ["accuracy", "latency", "memory", "power"],
+  "objective_weights": {
+    "accuracy": 0.4,
+    "latency": 0.3,
+    "memory": 0.2,
+    "power": 0.1
+  },
+  "max_search_iterations": 25
+}

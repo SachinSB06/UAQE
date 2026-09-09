@@ -1,0 +1,22 @@
+{
+  "preprocessing": "rgb_0_1",
+  "class_mapping": {
+    "Clean": 0,
+    "Bridge": 1,
+    "CMP": 2,
+    "Crack": 3,
+    "LER": 4,
+    "Open": 5,
+    "Particle": 6,
+    "VIA": 8,
+    "Other": 9
+  },
+  "input_layout": "NCHW",
+  "expected_num_classes": 10,
+  "evaluation_thresholds": {
+    "min_cosine_similarity": 0.95,
+    "max_mae": 0.15,
+    "max_rmse": 0.20,
+    "min_prediction_agreement": 0.90
+  }
+}

@@ -1,0 +1,11 @@
+# UAQE Phase E.1 Minimal Deployment Runtime Requirements
+# These dependencies are strictly required for running the UAQE runtime decoder,
+# FlatBuffer reconstructor, and executing INT8 TFLite inference.
+
+numpy>=1.24.0
+tensorflow>=2.15.0
+scipy>=1.11.0
+Pillow>=10.0.0
+psutil>=5.9.0
+pandas>=2.0.0
+scikit-learn>=1.3.0

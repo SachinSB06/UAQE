@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-09-04T04:00:49.072459Z",
+  "configs": {
+    "quantization.json": "c69933bcabeee0895b453b84300c1fae4d8a030e2aa57d3e53e9f35f59378a9f",
+    "compression.json": "8415fa52c121a88e42b823f88e94c0b1aaec283bd17051e2e10cd7ae87287796",
+    "optimization.json": "3ed163fa40e5c0876d8951c3b0cbd88b7c77202a4fc61a9a9db4f2075b103da7",
+    "config.json": "bf06a198ee539dbff2e1d6c3b8d0032c42edebb5fa6530d485498a0c1ce887f3",
+    "settings.yaml": "b6a08fa4ee7a915b56b3b38749f696f05550284eb466a81981f694f2eb3f4dc4",
+    "mobilenetv3_sem_eval.json": "aa93f7040a8e4d7b4e0019a6c7187a1bc66feb71d5e418985298bf9a599bdbca"
+  },
+  "reference_model": "616f53f5ef2a66e7028e075d2af204b20067ededffdf550a7696fdc476242711",
+  "exports": {
+    "manifests\\raspberrypi5\\manifest.json": "5933bf5996424ce04fa5b2f17acd32118094a45c3ca949da980e5624bc8c18f0",
+    "packages\\raspberrypi5_tflite.zip": "cc9c2276a8fb408a071de62b2a98b77a5e6065d20c5aff721940caa5154415ab",
+    "raspberrypi5\\model.onnx": "479d1be560df50be6a01890ac389d014b9525cc6c1fdca685015b0edd91e147f",
+    "raspberrypi5\\model.tflite": "7dc82e7e5dbf1a84e42911a897dacce362cff55ab017dcbf394cf3665bd16f85"
+  }
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "filename": "BRG_001.png",
+    "ground_truth_class": "Bridge",
+    "ground_truth_index": 1,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.0313725508749485,
+    "max_value": 1.0,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 1,
+    "predicted_class": "Bridge",
+    "top_3_scores": [
+      {
+        "index": 1,
+        "score": 1.9740582704544067
+      },
+      {
+        "index": 5,
+        "score": 1.437448501586914
+      },
+      {
+        "index": 2,
+        "score": 0.12328118085861206
+      }
+    ]
+  },
+  {
+    "filename": "CMP_009.png",
+    "ground_truth_class": "CMP",
+    "ground_truth_index": 2,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.0,
+    "max_value": 0.9921568632125854,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 2,
+    "predicted_class": "CMP",
+    "top_3_scores": [
+      {
+        "index": 2,
+        "score": 4.245966911315918
+      },
+      {
+        "index": 9,
+        "score": 0.855568528175354
+      },
+      {
+        "index": 7,
+        "score": -0.1458880454301834
+      }
+    ]
+  },
+  {
+    "filename": "CLN_019.png",
+    "ground_truth_class": "Clean",
+    "ground_truth_index": 0,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.04313725605607033,
+    "max_value": 0.9058823585510254,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 9,
+    "predicted_class": "Other",
+    "top_3_scores": [
+      {
+        "index": 9,
+        "score": 1.553114891052246
+      },
+      {
+        "index": 0,
+        "score": 0.7843660712242126
+      },
+      {
+        "index": 6,
+        "score": 0.6493492126464844
+      }
+    ]
+  },
+  {
+    "filename": "CRK_026.png",
+    "ground_truth_class": "Crack",
+    "ground_truth_index": 3,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.0,
+    "max_value": 1.0,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 9,
+    "predicted_class": "Other",
+    "top_3_scores": [
+      {
+        "index": 9,
+        "score": 1.4250446557998657
+      },
+      {
+        "index": 6,
+        "score": 1.0547561645507812
+      },
+      {
+        "index": 0,
+        "score": 0.8284099102020264
+      }
+    ]
+  },
+  {
+    "filename": "OPN_005.png",
+    "ground_truth_class": "Open",
+    "ground_truth_index": 5,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.0,
+    "max_value": 0.9764705896377563,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 9,
+    "predicted_class": "Other",
+    "top_3_scores": [
+      {
+        "index": 9,
+        "score": 1.3629025220870972
+      },
+      {
+        "index": 2,
+        "score": 1.110306739807129
+      },
+      {
+        "index": 6,
+        "score": 0.9465552568435669
+      }
+    ]
+  },
+  {
+    "filename": "OTH_015.png",
+    "ground_truth_class": "Other",
+    "ground_truth_index": 9,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.08627451211214066,
+    "max_value": 0.843137264251709,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 9,
+    "predicted_class": "Other",
+    "top_3_scores": [
+      {
+        "index": 9,
+        "score": 2.402677059173584
+      },
+      {
+        "index": 8,
+        "score": -0.27604830265045166
+      },
+      {
+        "index": 4,
+        "score": -0.8645858764648438
+      }
+    ]
+  },
+  {
+    "filename": "PRT_005.png",
+    "ground_truth_class": "Particle",
+    "ground_truth_index": 6,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.0470588244497776,
+    "max_value": 0.9450980424880981,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 1,
+    "predicted_class": "Bridge",
+    "top_3_scores": [
+      {
+        "index": 1,
+        "score": 0.8474621772766113
+      },
+      {
+        "index": 7,
+        "score": 0.32107144594192505
+      },
+      {
+        "index": 4,
+        "score": 0.16680574417114258
+      }
+    ]
+  },
+  {
+    "filename": "VIA_015.png",
+    "ground_truth_class": "VIA",
+    "ground_truth_index": 8,
+    "preprocessed_tensor_shape": [
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "min_value": 0.29411765933036804,
+    "max_value": 0.9450980424880981,
+    "fp32_output_shape": [
+      10
+    ],
+    "predicted_index": 0,
+    "predicted_class": "Clean",
+    "top_3_scores": [
+      {
+        "index": 0,
+        "score": 1.7536988258361816
+      },
+      {
+        "index": 8,
+        "score": 0.1632678210735321
+      },
+      {
+        "index": 3,
+        "score": 0.06051003932952881
+      }
+    ]
+  }
+]

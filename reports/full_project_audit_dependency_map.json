@@ -1,0 +1,94 @@
+{
+  "system_architecture": {
+    "frontend": {
+      "framework": "React 19 + TypeScript + Vite + TailwindCSS",
+      "entry_point": "frontend/src/main.tsx",
+      "root_component": "frontend/src/App.tsx",
+      "api_client": "frontend/src/services/api.ts",
+      "pages": {
+        "DashboardPage": "frontend/src/pages/DashboardPage.tsx",
+        "NewOptimizationPage": "frontend/src/pages/NewOptimizationPage.tsx",
+        "InspectionPlanPage": "frontend/src/pages/InspectionPlanPage.tsx",
+        "AutonomousCockpitPage": "frontend/src/pages/AutonomousCockpitPage.tsx",
+        "ResultsPage": "frontend/src/pages/ResultsPage.tsx",
+        "JobsPage": "frontend/src/pages/JobsPage.tsx",
+        "SettingsPage": "frontend/src/pages/SettingsPage.tsx"
+      },
+      "dev_server": "http://localhost:3000 (proxies /api to http://127.0.0.1:8000)"
+    },
+    "backend": {
+      "framework": "FastAPI + Uvicorn + Pydantic v2",
+      "entry_point": "src/uaqe/server.py",
+      "api_routers": [
+        "src/uaqe/api/routes_jobs.py",
+        "src/uaqe/api/routes_uploads.py"
+      ],
+      "schemas": "src/uaqe/api/schemas.py",
+      "staging_root": "output/uploads/",
+      "jobs_root": "output/jobs/"
+    },
+    "orchestration": {
+      "master_orchestrator": "src/uaqe/orchestration/optimization_orchestrator.py",
+      "model_ingestion": "src/uaqe/orchestration/universal_model_ingestor.py",
+      "dataset_ingestion": "src/uaqe/orchestration/universal_dataset_ingestor.py",
+      "task_detection": "src/uaqe/orchestration/task_detector.py",
+      "compatibility_checking": "src/uaqe/orchestration/compatibility_checker.py",
+      "preprocessing_resolution": "src/uaqe/orchestration/preprocessing_resolver.py",
+      "hardware_registry": "src/uaqe/orchestration/hardware_target_registry.py",
+      "model_adaptation": "src/uaqe/orchestration/model_adaptation_service.py",
+      "optimization_planning": "src/uaqe/orchestration/optimization_planner.py",
+      "strategy_resolver": "src/uaqe/orchestration/optimization_strategies/strategy_resolver.py",
+      "strategies": [
+        "src/uaqe/orchestration/optimization_strategies/resnet_onnx_ptq_strategy.py",
+        "src/uaqe/orchestration/optimization_strategies/mobilenet_adaptive_strategy.py",
+        "src/uaqe/orchestration/optimization_strategies/generic_fallback_strategy.py"
+      ]
+    },
+    "optimization_engine": {
+      "controller": "src/uaqe/optimization/optimization_controller.py",
+      "candidate_generator": "src/uaqe/optimization/candidate_generator.py",
+      "candidate_evaluator": "src/uaqe/optimization/candidate_evaluator.py",
+      "search_manager": "src/uaqe/optimization/search_manager.py",
+      "accuracy_safety_policy": "src/uaqe/optimization/accuracy_safety_policy.py",
+      "objective_function": "src/uaqe/optimization/objective_function.py",
+      "stopping_policy": "src/uaqe/optimization/stopping_policy.py",
+      "telemetry_session": "src/uaqe/telemetry/telemetry_session.py",
+      "runtime_monitor": "src/uaqe/telemetry/runtime_monitor.py"
+    },
+    "quantization_backends": {
+      "onnx_ptq": "src/uaqe/quantization/r1_resnet50_ptq.py",
+      "mixed_precision": "src/uaqe/quantization/mixed_precision_search.py",
+      "pruning": "src/uaqe/compression/sensitivity_structured_pruner.py",
+      "clustering": "src/uaqe/clustering/weight_clustering_optimizer.py"
+    },
+    "evaluators": {
+      "resnet_evaluator": "src/uaqe/evaluation/r1_resnet50_evaluator.py",
+      "mobilenet_evaluator": "src/uaqe/evaluation/mobilenet_evaluator.py"
+    }
+  },
+  "execution_call_graph": {
+    "fresh_optimization_flow": [
+      "Frontend (NewOptimizationPage) -> POST /api/uploads/model",
+      "Frontend (NewOptimizationPage) -> POST /api/uploads/dataset",
+      "Frontend (NewOptimizationPage) -> POST /api/jobs/analyze",
+      "Frontend (InspectionPlanPage) -> POST /api/jobs/optimize",
+      "Backend (routes_jobs.py) -> creates output/jobs/<job_id>/inputs/ (Model & Dataset Isolated)",
+      "Backend (routes_jobs.py) -> launches BackgroundTasks (_run_optimization_worker)",
+      "Backend (routes_jobs.py) -> returns {job_id, events_url: '/api/jobs/<job_id>/events'}",
+      "Frontend (App.tsx) -> EventSource('/api/jobs/<job_id>/events') [BROKEN IN CURRENT CODE: HTTP 404]",
+      "Background Worker -> OptimizationOrchestrator.run(job_config)",
+      "OptimizationOrchestrator -> UniversalModelIngestor, UniversalDatasetIngestor, TaskDetector, CompatibilityChecker",
+      "OptimizationOrchestrator -> PreprocessingResolver, ModelAdaptationService, OptimizationPlanner",
+      "OptimizationOrchestrator -> OptimizationController.optimize()",
+      "OptimizationController -> establish_fp32_baseline()",
+      "OptimizationController -> CandidateGenerator loop",
+      "OptimizationController -> CandidateEvaluator.evaluate() (ONNX Static INT8 PTQ / Protected Layers / Pruned)",
+      "OptimizationController -> AccuracySafetyPolicy.classify() (EXCELLENT <= 1.0pp, ACCEPTABLE <= 4.0pp, CRITICAL > 4.0pp)",
+      "OptimizationController -> StoppingPolicy.evaluate()",
+      "OptimizationController -> _package_final_candidate() (outputs optimized_model.onnx, metrics.json, report.md, telemetry.json)",
+      "OptimizationController -> search_manager.export_artifacts() (outputs optimization_history.json, pareto_frontier.json)",
+      "Background Worker -> broadcasts 'complete' event to SSE queue",
+      "Frontend -> receives complete event -> loads job details -> displays ResultsPage"
+    ]
+  }
+}

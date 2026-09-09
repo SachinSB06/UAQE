@@ -1,0 +1,19 @@
+{
+  "dataset_path": "D:\\Quantization embedded\\datasets\\hackathon_test_dataset",
+  "total_samples": 296,
+  "class_counts": {
+    "Bridge": 32,
+    "CMP": 30,
+    "Clean": 33,
+    "Crack": 31,
+    "LER": 30,
+    "Open": 30,
+    "Other": 50,
+    "Particle": 30,
+    "VIA": 30
+  },
+  "corrupt_files_count": 0,
+  "skipped_files_count": 0,
+  "corrupt_files_list": [],
+  "skipped_files_list": []
+}

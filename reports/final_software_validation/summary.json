@@ -1,0 +1,45 @@
+{
+  "run_id": "run_1788494449",
+  "run_start_time": "2026-09-04T04:00:49.072459Z",
+  "run_end_time": "2026-09-04T04:01:28.822635Z",
+  "pipeline_status": "PASS",
+  "quality_gate_status": "FAIL",
+  "production_integrity_status": "PASS",
+  "final_status": "FAIL",
+  "accuracy": {
+    "fp32_accuracy": 0.3716216216216216,
+    "onnx_accuracy": 0.36824324324324326,
+    "tflite_accuracy": 0.2195945945945946,
+    "onnx_delta_vs_fp32_pp": -0.3378378378378344,
+    "tflite_delta_vs_fp32_pp": -15.2027027027027,
+    "tflite_delta_vs_onnx_pp": -14.864864864864865
+  },
+  "size": {
+    "fp32_onnx_size_bytes": 6126813,
+    "fp32_onnx_parameter_bytes": 6088200,
+    "optimized_onnx_size_bytes": 2275952,
+    "optimized_onnx_parameter_bytes": 2203570,
+    "tflite_size_bytes": 1856864,
+    "tflite_parameter_bytes": 1552114,
+    "fp32_to_onnx_reduction_percent": 62.85259563169302,
+    "fp32_to_tflite_reduction_percent": 69.69282398532484,
+    "onnx_to_tflite_reduction_percent": 18.41374510534493,
+    "fp32_to_tflite_compression_ratio": 3.299548593758078,
+    "fp32_to_onnx_compression_ratio": 2.6919781260764726
+  },
+  "performance": {
+    "fp32_latency_mean_ms": 1.3531110000621993,
+    "onnx_latency_mean_ms": 1.8589730000712734,
+    "tflite_latency_mean_ms": 2.3097939998842776,
+    "tflite_throughput_fps": 432.93904133879505
+  },
+  "stability": {
+    "failures": 0,
+    "rss_growth_bytes": 0
+  },
+  "tests": {
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "esp32",
+  "display_name": "ESP32",
+  "hardware_class": "EMBEDDED",
+  "ram_bytes": 524288,
+  "flash_bytes": 4194304,
+  "storage_bytes": null,
+  "tensor_memory_bytes": 262144,
+  "runtime": "tflite-micro",
+  "default_runtime": "tflite-micro",
+  "supported_runtimes": ["tflite-micro"],
+  "supported_precisions": ["INT8"],
+  "max_model_size_bytes": 1048576,
+  "preferred_export_formats": ["TFLITE", "BIN", "H_HEADER"],
+  "clock_speed_hz": null,
+  "fpga_resources": null,
+  "constraints": [
+    "Dual-core Xtensa LX6 at up to 240 MHz; no hardware FPU for double precision, so INT8 quantization is required for practical inference.",
+    "520 KB total SRAM is shared with WiFi/BT stacks and application code; tensor arena must be sized well below total RAM.",
+    "No native NPU/DSP acceleration; all inference runs on the CPU via TFLite Micro kernels."
+  ]
+}

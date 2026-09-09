@@ -1,0 +1,76 @@
+name: UAQE Continuous Integration
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  backend-tests:
+    name: Backend Regression & Architecture Suites
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-runtime.txt
+          pip install fastapi uvicorn pydantic pytest httpx
+
+      - name: Verify CLI Help and Arguments
+        run: |
+          python uaqe.py --help
+
+      - name: Run Candidate Metric Identity Suite
+        run: |
+          python pytest.py -q tests/test_candidate_metric_identity.py
+
+      - name: Run Latency Provenance Suite
+        run: |
+          python pytest.py -q tests/test_candidate_latency_provenance.py
+
+      - name: Run Candidate Selection and Artifact Download Suite
+        run: |
+          python pytest.py -q tests/test_candidate_selection_and_download.py
+
+  frontend-build:
+    name: Frontend Verification & Production Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm ci || npm install
+
+      - name: Run Candidate Metrics Logic Unit Tests
+        working-directory: ./frontend
+        run: |
+          node src/tests/test_candidate_metrics.mjs
+          node src/tests/test_candidate_normalization.mjs
+
+      - name: Build Frontend Production Bundle
+        working-directory: ./frontend
+        run: npm run build

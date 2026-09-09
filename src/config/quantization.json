@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "default_precision": "INT8",
+  "per_layer_overrides": {},
+  "calibration_batch_size": 32,
+  "sensitivity_threshold": 0.01,
+  "advisor": {
+    "allow_mixed_precision": true,
+    "max_precision_levels_considered": 3
+  }
+}

@@ -1,0 +1,3 @@
+Candidate,Configuration,Calibration Status,Accuracy,TFLite Size,Latency,Status
+R1,INT8 + Reconstruction (no BN),BLOCKED,N/A,N/A,N/A,BLOCKED
+R2,INT8 + Reconstruction (with BN),BLOCKED,N/A,N/A,N/A,BLOCKED

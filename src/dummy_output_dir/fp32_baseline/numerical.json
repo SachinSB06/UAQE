@@ -1,0 +1,5 @@
+{
+  "fp32_vs_tflite": {
+    "cosine_similarity": 0.98
+  }
+}

@@ -1,0 +1,316 @@
+"""
+UAQE Phase D.5 Runtime Decoder
+Decodes UAQE adaptive compressed binary archives (.bin / .uaqe), verifies
+exact tensor equality, and reconstructs executable TFLite FlatBuffers for live inference.
+"""
+
+from __future__ import annotations
+
+import os
+import struct
+import hashlib
+from typing import Dict, List, Tuple, Any, Optional
+import numpy as np
+from scipy.spatial.distance import cosine
+
+import tensorflow as tf
+from tensorflow.lite.python import schema_py_generated as schema_fb
+
+try:
+    from src.uaqe.compression.sparse_encoder import SparseEncoder
+    from src.uaqe.compression.rle_compressor import RLECompressor
+    from src.uaqe.compression.weight_clusterer import WeightClusterer
+except ImportError:
+    from uaqe.compression.sparse_encoder import SparseEncoder
+    from uaqe.compression.rle_compressor import RLECompressor
+    from uaqe.compression.weight_clusterer import WeightClusterer
+
+
+class RuntimeDecoder:
+    """Decodes compressed UAQE archives, validates structure, and reconstructs TFLite models."""
+
+    MAGIC_HEADER = b"UAQE_D4\x01"
+    SUPPORTED_VERSIONS = [1]
+
+    STRATEGY_MAP = {
+        0: "dense",
+        1: "sparse",
+        2: "sparse_rle",
+        3: "cluster32",
+        4: "cluster64",
+        5: "cluster16",
+        6: "cluster8"
+    }
+
+    def __init__(self, base_template_path: str = "output/phase_c4/models/c4_best_int8.tflite"):
+        self.base_template_path = base_template_path
+        self.archive_path: Optional[str] = None
+        self.archive_bytes: Optional[bytes] = None
+        self.archive_hash: Optional[str] = None
+        self._parsed_metadata: Optional[Dict[str, Any]] = None
+
+    @staticmethod
+    def compute_sha256(data: bytes) -> str:
+        """Computes SHA-256 hexadecimal digest of raw bytes."""
+        hasher = hashlib.sha256()
+        hasher.update(data)
+        return hasher.hexdigest()
+
+    def load(self, path: str) -> Dict[str, Any]:
+        """Loads and strictly validates the binary archive from disk."""
+        if not os.path.exists(path):
+            raise FileNotFoundError(f"Archive not found: {path}")
+
+        file_size = os.path.getsize(path)
+        if file_size < 21:
+            raise ValueError(f"Truncated archive: size {file_size} bytes is smaller than master header (21 bytes).")
+
+        with open(path, "rb") as f:
+            raw = f.read()
+
+        # Validate master header: [MAGIC: 8B] [version: 1B] [num_tensors: 4B] [total_raw_bytes: 4B] [reserved: 4B]
+        magic, version, num_tensors, total_raw_bytes, reserved = struct.unpack_from("<8sBIII", raw, 0)
+
+        if magic != self.MAGIC_HEADER:
+            raise ValueError(
+                f"Invalid archive magic: expected {self.MAGIC_HEADER!r}, got {magic!r}. Not a valid UAQE D4/D5 archive."
+            )
+
+        if version not in self.SUPPORTED_VERSIONS:
+            raise ValueError(
+                f"Unsupported format version {version}. Supported versions: {self.SUPPORTED_VERSIONS}."
+            )
+
+        if num_tensors <= 0 or num_tensors > 10000:
+            raise ValueError(f"Invalid tensor count in archive header: {num_tensors}.")
+
+        self.archive_path = path
+        self.archive_bytes = raw
+        self.archive_hash = self.compute_sha256(raw)
+
+        # Inspect block boundaries
+        offset = 21
+        blocks = []
+        for i in range(num_tensors):
+            if offset + 13 > len(raw):
+                raise ValueError(
+                    f"Truncated archive at tensor record {i}/{num_tensors}: unexpected EOF reading record header."
+                )
+            t_idx, b_idx, strat_code, p_len = struct.unpack_from("<IIBI", raw, offset)
+            offset += 13
+
+            if offset + p_len > len(raw):
+                raise ValueError(
+                    f"Payload overflow at tensor {i} (tensor_idx={t_idx}, buffer_idx={b_idx}): "
+                    f"expected payload length {p_len} exceeds remaining archive bytes ({len(raw) - offset})."
+                )
+
+            strat_name = self.STRATEGY_MAP.get(strat_code, f"unknown_{strat_code}")
+            blocks.append({
+                "record_index": i,
+                "tensor_index": t_idx,
+                "buffer_index": b_idx,
+                "strategy_code": strat_code,
+                "strategy": strat_name,
+                "payload_offset": offset,
+                "payload_length": p_len
+            })
+            offset += p_len
+
+        self._parsed_metadata = {
+            "archive_path": path,
+            "archive_size_bytes": file_size,
+            "archive_sha256": self.archive_hash,
+            "magic": magic.decode("latin-1", errors="replace"),
+            "version": version,
+            "num_tensors": num_tensors,
+            "total_raw_weight_bytes": total_raw_bytes,
+            "header_bytes": 21,
+            "payload_blocks": blocks
+        }
+        return self._parsed_metadata
+
+    def inspect(self) -> Dict[str, Any]:
+        """Returns structural metadata and summary of the loaded archive."""
+        if self._parsed_metadata is None:
+            raise RuntimeError("No archive loaded. Call load() first.")
+        return self._parsed_metadata
+
+    def decode(self) -> List[Dict[str, Any]]:
+        """Decodes all compressed tensor blocks into in-memory NumPy INT8 arrays."""
+        if self.archive_bytes is None or self._parsed_metadata is None:
+            raise RuntimeError("No archive loaded. Call load() first.")
+
+        raw = self.archive_bytes
+        decoded_tensors = []
+
+        for block in self._parsed_metadata["payload_blocks"]:
+            t_idx = block["tensor_index"]
+            b_idx = block["buffer_index"]
+            strat_code = block["strategy_code"]
+            strat_name = block["strategy"]
+            p_offset = block["payload_offset"]
+            p_len = block["payload_length"]
+
+            payload = raw[p_offset:p_offset + p_len]
+
+            # Decode based on strategy code
+            if strat_code == 0:  # Dense
+                arr = np.frombuffer(payload, dtype=np.int8)
+                name = f"tensor_{t_idx}"
+            elif strat_code == 1:  # Sparse
+                arr, name, _ = SparseEncoder.decode_from_bytes(payload, 0)
+            elif strat_code == 2:  # Sparse + RLE
+                arr, name, _ = RLECompressor.decode_from_bytes(payload, 0)
+            elif strat_code in [3, 4, 5, 6]:  # Cluster
+                arr, name, _ = WeightClusterer.decode_from_bytes(payload, 0)
+            else:
+                raise ValueError(f"Unsupported strategy code: {strat_code} for tensor index {t_idx}.")
+
+            decoded_tensors.append({
+                "tensor_index": t_idx,
+                "buffer_index": b_idx,
+                "tensor_name": name,
+                "strategy": strat_name,
+                "shape": list(arr.shape),
+                "data": arr,
+                "byte_length": arr.nbytes
+            })
+
+        return decoded_tensors
+
+    def reconstruct(self, template_tflite_path: Optional[str] = None) -> bytearray:
+        """Injects decoded weights into FlatBuffer template buffer memory, returning runnable model bytes."""
+        decoded = self.decode()
+        tpl_path = template_tflite_path or self.base_template_path
+
+        if not os.path.exists(tpl_path):
+            raise FileNotFoundError(f"Template TFLite model not found at {tpl_path}")
+
+        with open(tpl_path, "rb") as f:
+            tflite_buf = bytearray(f.read())
+
+        model = schema_fb.Model.GetRootAsModel(tflite_buf, 0)
+
+        for item in decoded:
+            b_idx = item["buffer_index"]
+            arr = item["data"]
+
+            b = model.Buffers(b_idx)
+            offset = b._tab.Vector(b._tab.Offset(4))
+            data_len = b.DataLength()
+
+            raw_bytes = arr.astype(np.int8).tobytes()
+            patch_len = min(data_len, len(raw_bytes))
+            tflite_buf[offset:offset + patch_len] = raw_bytes[:patch_len]
+
+        return tflite_buf
+
+    def reconstruct_to_file(
+        self,
+        output_tflite_path: str,
+        template_tflite_path: Optional[str] = None
+    ) -> str:
+        """Reconstructs the model and saves the runnable .tflite file to disk."""
+        model_bytes = self.reconstruct(template_tflite_path)
+        os.makedirs(os.path.dirname(output_tflite_path), exist_ok=True)
+        with open(output_tflite_path, "wb") as f:
+            f.write(model_bytes)
+        return output_tflite_path
+
+    def extract_weights_from_tflite(self, tflite_path: str) -> Dict[int, Dict[str, Any]]:
+        """Extracts map of buffer_index -> {name, shape, data} from a TFLite file."""
+        with open(tflite_path, "rb") as f:
+            raw_buf = bytearray(f.read())
+
+        model = schema_fb.Model.GetRootAsModel(raw_buf, 0)
+        subgraph = model.Subgraphs(0)
+        
+        weight_map = {}
+        for i in range(subgraph.TensorsLength()):
+            t = subgraph.Tensors(i)
+            b_idx = t.Buffer()
+            b = model.Buffers(b_idx)
+            
+            if b and b.DataLength() > 0 and t.Type() == 9:
+                t_name = t.Name().decode("utf-8") if t.Name() else f"tensor_{i}"
+                shape = [t.Shape(j) for j in range(t.ShapeLength())]
+                data_np = b.DataAsNumpy().astype(np.int8)
+                weight_map[b_idx] = {
+                    "tensor_index": i,
+                    "buffer_index": b_idx,
+                    "name": t_name,
+                    "shape": shape,
+                    "data": data_np
+                }
+        return weight_map
+
+    def verify_tensors(self, source_tflite_path: str) -> Dict[str, Any]:
+        """Compares decoded tensors against source model tensors for mathematical and byte equality."""
+        decoded = self.decode()
+        source_weights = self.extract_weights_from_tflite(source_tflite_path)
+
+        tensor_verifications = []
+        all_exact = True
+        all_src_flat = []
+        all_dec_flat = []
+
+        for item in decoded:
+            b_idx = item["buffer_index"]
+            dec_arr = item["data"].astype(np.float32).flatten()
+
+            if b_idx in source_weights:
+                src_info = source_weights[b_idx]
+                src_arr = src_info["data"].astype(np.float32).flatten()
+
+                min_len = min(len(src_arr), len(dec_arr))
+                src_sub = src_arr[:min_len]
+                dec_sub = dec_arr[:min_len]
+
+                diff = np.abs(src_sub - dec_sub)
+                mae = float(np.mean(diff))
+                max_err = float(np.max(diff)) if diff.size > 0 else 0.0
+                rmse = float(np.sqrt(np.mean(diff ** 2)))
+                exact = bool(max_err == 0.0)
+
+                denom = np.linalg.norm(src_sub) * np.linalg.norm(dec_sub)
+                cos_sim = float(1.0 - cosine(src_sub, dec_sub)) if denom > 1e-12 else 1.0
+
+                if not exact:
+                    all_exact = False
+
+                all_src_flat.extend(src_sub.tolist())
+                all_dec_flat.extend(dec_sub.tolist())
+
+                tensor_verifications.append({
+                    "buffer_index": b_idx,
+                    "tensor_index": item["tensor_index"],
+                    "tensor_name": src_info["name"],
+                    "strategy": item["strategy"],
+                    "source_elements": len(src_arr),
+                    "decoded_elements": len(dec_arr),
+                    "exact_match": exact,
+                    "max_abs_error": round(max_err, 4),
+                    "mae": round(mae, 6),
+                    "rmse": round(rmse, 6),
+                    "cosine_similarity": round(cos_sim, 6)
+                })
+
+        all_src_np = np.array(all_src_flat)
+        all_dec_np = np.array(all_dec_flat)
+        overall_diff = np.abs(all_src_np - all_dec_np)
+        overall_mae = float(np.mean(overall_diff))
+        overall_max_err = float(np.max(overall_diff)) if overall_diff.size > 0 else 0.0
+        overall_rmse = float(np.sqrt(np.mean(overall_diff ** 2)))
+        denom = np.linalg.norm(all_src_np) * np.linalg.norm(all_dec_np)
+        overall_cos = float(1.0 - cosine(all_src_np, all_dec_np)) if denom > 1e-12 else 1.0
+
+        return {
+            "all_tensors_exact_match": all_exact,
+            "overall_mae": round(overall_mae, 6),
+            "overall_max_error": round(overall_max_err, 4),
+            "overall_rmse": round(overall_rmse, 6),
+            "overall_cosine_similarity": round(overall_cos, 6),
+            "tensor_count": len(tensor_verifications),
+            "tensor_records": tensor_verifications
+        }

@@ -1,0 +1,22 @@
+{
+  "model_upload_id": "PRE_VERIFIED_SAMPLE_RESNET50",
+  "original_sha256": "6203f851642680e8d5d5dce1b3619685bc4d19859e31094088f13be53944ca79",
+  "staged_sha256": "6203f851642680e8d5d5dce1b3619685bc4d19859e31094088f13be53944ca79",
+  "checkpoint_mode": "VERIFIED_BENCHMARK",
+  "weight_source": "ORIGINAL_MODEL",
+  "adaptation_status": "NOT_REQUIRED",
+  "baseline_status": "VALID",
+  "baseline_threshold_percent": 25.0,
+  "baseline_accuracy": 0.75,
+  "optimized_accuracy": 0.743,
+  "accuracy_delta_pp": -0.7,
+  "accuracy_loss_pp": 0.7,
+  "safety_status": "EXCELLENT",
+  "fp32_latency_ms": 74.65,
+  "optimized_latency_ms": 33.311,
+  "latency_change_pct": 55.38,
+  "target_id": "raspberrypi5",
+  "selected_strategy": "resnet_onnx_ptq",
+  "validation_status": "PASSED",
+  "verdict": "VERIFIED"
+}

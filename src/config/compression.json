@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "enabled_types": [],
+  "target_ratio": 0.5,
+  "pruning_sparsity": 0.3,
+  "experimental_pruning_strategy": "calibration_guided_reconstruction",
+  "advisor": {
+    "prefer_lossless_when_hardware_allows": true,
+    "min_acceptable_accuracy_delta": -0.02
+  }
+}

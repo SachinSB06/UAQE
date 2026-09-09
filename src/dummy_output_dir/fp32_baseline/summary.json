@@ -1,0 +1,24 @@
+{
+  "name": "fp32_baseline",
+  "status": "SUCCESS",
+  "overrides": {
+    "quantization.default_precision": "FP32"
+  },
+  "accuracy": {
+    "tflite_accuracy": 0.35
+  },
+  "size": {
+    "tflite_size_bytes": 1000
+  },
+  "performance": {
+    "tflite_latency_mean_ms": 2.0
+  },
+  "memory": {
+    "tflite_rss_peak_bytes": 500
+  },
+  "numerical": {
+    "fp32_vs_tflite": {
+      "cosine_similarity": 0.98
+    }
+  }
+}

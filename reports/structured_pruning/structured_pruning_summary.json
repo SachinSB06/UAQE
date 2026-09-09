@@ -1,0 +1,63 @@
+{
+  "pruning_strategy": "sensitivity_aware_structured",
+  "fine_tune_blocked": true,
+  "max_accuracy_drop": 0.01,
+  "max_latency_regression": 0.05,
+  "iterations": [
+    {
+      "target_sparsity": 0.02,
+      "parameter_count": 12130,
+      "estimated_latency_ms": 0.01213,
+      "validation_accuracy": "UNKNOWN",
+      "size_constraint": "PASS",
+      "latency_constraint": "PASS",
+      "accuracy_constraint": "PASS",
+      "fine_tune_status": "BLOCKED \u2014 no independent training/validation data",
+      "accepted": true
+    },
+    {
+      "target_sparsity": 0.04,
+      "parameter_count": 11882,
+      "estimated_latency_ms": 0.011882,
+      "validation_accuracy": "UNKNOWN",
+      "size_constraint": "PASS",
+      "latency_constraint": "PASS",
+      "accuracy_constraint": "PASS",
+      "fine_tune_status": "BLOCKED \u2014 no independent training/validation data",
+      "accepted": true
+    },
+    {
+      "target_sparsity": 0.06,
+      "parameter_count": 11634,
+      "estimated_latency_ms": 0.011634,
+      "validation_accuracy": "UNKNOWN",
+      "size_constraint": "PASS",
+      "latency_constraint": "PASS",
+      "accuracy_constraint": "PASS",
+      "fine_tune_status": "BLOCKED \u2014 no independent training/validation data",
+      "accepted": true
+    },
+    {
+      "target_sparsity": 0.08,
+      "parameter_count": 11386,
+      "estimated_latency_ms": 0.011386,
+      "validation_accuracy": "UNKNOWN",
+      "size_constraint": "PASS",
+      "latency_constraint": "PASS",
+      "accuracy_constraint": "PASS",
+      "fine_tune_status": "BLOCKED \u2014 no independent training/validation data",
+      "accepted": true
+    },
+    {
+      "target_sparsity": 0.1,
+      "parameter_count": 11138,
+      "estimated_latency_ms": 0.011138,
+      "validation_accuracy": "UNKNOWN",
+      "size_constraint": "PASS",
+      "latency_constraint": "PASS",
+      "accuracy_constraint": "PASS",
+      "fine_tune_status": "BLOCKED \u2014 no independent training/validation data",
+      "accepted": true
+    }
+  ]
+}

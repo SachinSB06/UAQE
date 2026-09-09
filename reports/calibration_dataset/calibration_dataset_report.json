@@ -1,0 +1,206 @@
+{
+  "status": "READY",
+  "summary": {
+    "total_images": 1258,
+    "train_count": 877,
+    "val_count": 184,
+    "test_count": 197,
+    "calibration_subset_count": 200,
+    "image_extensions": [
+      ".jpeg",
+      ".jpg",
+      ".png"
+    ],
+    "image_dimensions": [
+      "122x106",
+      "136x142",
+      "138x140",
+      "163x167",
+      "165x170",
+      "169x166",
+      "169x169",
+      "176x179",
+      "182x179",
+      "184x176",
+      "189x168",
+      "191x171",
+      "191x182",
+      "194x170",
+      "196x177",
+      "197x176",
+      "199x164",
+      "199x199",
+      "200x173",
+      "202x201",
+      "214x195",
+      "215x187",
+      "215x206",
+      "216x200",
+      "222x200",
+      "226x191",
+      "230x233",
+      "233x243",
+      "256x256",
+      "258x203",
+      "318x317",
+      "323x326",
+      "323x331",
+      "326x327",
+      "330x323",
+      "331x305",
+      "332x299",
+      "335x300",
+      "336x330",
+      "343x287",
+      "351x289",
+      "353x284",
+      "358x389",
+      "359x295",
+      "363x363",
+      "372x378",
+      "373x367",
+      "376x365",
+      "394x348",
+      "398x380",
+      "402x394",
+      "409x352",
+      "411x416",
+      "426x426",
+      "449x364",
+      "450x364",
+      "454x370",
+      "455x446",
+      "459x363",
+      "464x455",
+      "466x362",
+      "467x470",
+      "504x356",
+      "556x362",
+      "561x426",
+      "612x443",
+      "641x313",
+      "641x627",
+      "675x614",
+      "75x72"
+    ],
+    "channel_formats": [
+      "L",
+      "RGB",
+      "RGBA"
+    ],
+    "grayscale_count": 1188,
+    "rgb_count": 33,
+    "other_mode_count": 37,
+    "corrupt_count": 0,
+    "internal_duplicates_count": 3,
+    "cross_dataset_leakage_count": 0
+  },
+  "taxonomy": {
+    "calibration_classes": [
+      "bridge",
+      "clean",
+      "cmp",
+      "crack",
+      "opens",
+      "other",
+      "particle",
+      "scratch",
+      "vias"
+    ],
+    "hackathon_classes": [
+      "Bridge",
+      "CMP",
+      "Clean",
+      "Crack",
+      "LER",
+      "Open",
+      "Other",
+      "Particle",
+      "VIA"
+    ],
+    "mapping": {
+      "bridge": {
+        "mapped_to_configured_class": "Bridge",
+        "class_index": 1,
+        "status": "MATCH"
+      },
+      "clean": {
+        "mapped_to_configured_class": "Clean",
+        "class_index": 0,
+        "status": "MATCH"
+      },
+      "cmp": {
+        "mapped_to_configured_class": "CMP",
+        "class_index": 2,
+        "status": "MATCH"
+      },
+      "crack": {
+        "mapped_to_configured_class": "Crack",
+        "class_index": 3,
+        "status": "MATCH"
+      },
+      "opens": {
+        "mapped_to_configured_class": "Open",
+        "class_index": 5,
+        "status": "NAMING_MISMATCH"
+      },
+      "other": {
+        "mapped_to_configured_class": "Other",
+        "class_index": 9,
+        "status": "MATCH"
+      },
+      "particle": {
+        "mapped_to_configured_class": "Particle",
+        "class_index": 6,
+        "status": "MATCH"
+      },
+      "scratch": {
+        "mapped_to_configured_class": "LER",
+        "class_index": 4,
+        "status": "NAMING_MISMATCH"
+      },
+      "vias": {
+        "mapped_to_configured_class": "VIA",
+        "class_index": 8,
+        "status": "NAMING_MISMATCH"
+      }
+    },
+    "mismatches": [
+      "Calibration folder 'opens' mapped to configured class 'Open' (naming mismatch)",
+      "Calibration folder 'scratch' mapped to configured class 'LER' (naming mismatch)",
+      "Calibration folder 'vias' mapped to configured class 'VIA' (naming mismatch)"
+    ],
+    "missing_in_calibration": []
+  },
+  "preprocessing_compatibility": {
+    "compatible": true,
+    "mode": "rgb_0_1",
+    "layout": "NCHW",
+    "errors": []
+  },
+  "leakage_details": [],
+  "internal_duplicates": [
+    {
+      "hash": "f3a9252eacbd674d6aff9d5ca8fe11bfdd55a28bc75d1ac005431e62855e3d7c",
+      "paths": [
+        "datasets/calibration/dataset/train/cmp/cmp101.png",
+        "datasets/calibration/dataset/train/cmp/cmp36.png"
+      ]
+    },
+    {
+      "hash": "b178de3e9bdc736ff6f6e5ce4d86718ee749e37fb6fb9ccbd4d471492f9fe6d5",
+      "paths": [
+        "datasets/calibration/dataset/train/cmp/cmp146.png",
+        "datasets/calibration/dataset/train/cmp/cmp92.png"
+      ]
+    },
+    {
+      "hash": "b2ceda8a441a1c38bd1635812dd4cf85a4aa81f407d3b6194128d6946120e6a4",
+      "paths": [
+        "datasets/calibration/dataset/train/opens/open150.png",
+        "datasets/calibration/dataset/test/opens/open133.png"
+      ]
+    }
+  ],
+  "corrupt_files": []
+}

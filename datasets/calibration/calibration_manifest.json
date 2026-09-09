@@ -1,0 +1,1830 @@
+{
+  "calibration_root": "datasets/calibration/dataset",
+  "source_split": "train",
+  "count": 200,
+  "selection_seed": 42,
+  "selection_policy": "stratified_class_proportional",
+  "preprocessing_reference": {
+    "preprocessing": "rgb_0_1",
+    "input_layout": "NCHW",
+    "input_shape": [
+      1,
+      3,
+      128,
+      128
+    ],
+    "class_mapping": {
+      "bridge": "Bridge",
+      "clean": "Clean",
+      "cmp": "CMP",
+      "crack": "Crack",
+      "opens": "Open",
+      "other": "Other",
+      "particle": "Particle",
+      "scratch": "LER",
+      "vias": "VIA"
+    }
+  },
+  "images": [
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge104.png",
+      "hash": "09c7e957058fc076810d1bf7e8146d3bf8a10ba259012bbaf2762421d99e2717",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge115.png",
+      "hash": "eeff865bcdad8ee994c10f3fb802123dc7d3ac69f089edfbdcbb3b636d9bec0c",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge121.png",
+      "hash": "caade7482b1172eac2548ced276d8583fb8013e11efd8fb14bfd4233e6ba3978",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge122.png",
+      "hash": "eeb57acccedf5f65c5bf3b79054ef1cf55d6c965e21003f75ed815aa3bff2ac9",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge132.png",
+      "hash": "b54fd2f5d4de0c0cf90073dd5f51b6fd0e91ff0e5d96c423ba5b07d8347fecac",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge146.png",
+      "hash": "59297163096f552cd2f2e13312a1bf0ce5b5520255d17e8bbdcd09b41cd9c962",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge148.png",
+      "hash": "9343c3813e613d14d77ecd66927390dca04802a2de21627120a0b29110569928",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge153.PNG",
+      "hash": "f5f5bb065a4bd0023e78e26885d8aa1d039630612850e1f9243d74b738d9267c",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 330,
+      "height": 323,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge161.PNG",
+      "hash": "e5607fe4c222fcfb5d75bd0aa467cecdd84325101a197f3484dc8ad2a778bffe",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 182,
+      "height": 179,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge18.png",
+      "hash": "aaa5c6e1cffa3563c01821f98d654f115d89f10d179d0eb6ec2c166f991c44d4",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge20.png",
+      "hash": "e2a1c78b62937d3884a0bbd0a143378bc9881f47e7f1ab324404c728557db4c2",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge28.png",
+      "hash": "f1519eef2a11c8a89a0ea4527c0eae07754cc6589b6825597a2bcb56136b10d6",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge30.png",
+      "hash": "5ce702af1d427ad401a76610fe331b0d4294d641f1851628576acbc7494dfe3c",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge32.png",
+      "hash": "83b65d9cedc1e85aded1dd804b166c07cd5249f9e4037453159810939320275c",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge35.png",
+      "hash": "73527369c5cae16ff1b04516596719e311998c6d958a0d4a3a659736d5a0ceb2",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge40.png",
+      "hash": "b0da6ce82e8171e9041e730435b70e877bb1c6a2584356032202f37c9145b604",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge41.png",
+      "hash": "66400adcb420bec1f0d8af7ff35b4156c0244ef61c2c4df89e652b8d8ce65f9b",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge47.png",
+      "hash": "d0799b7aa3be309b658848ea7062bebc6a0679632656e2b80de2cf12d4f15868",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge56.png",
+      "hash": "ee20d7544b768f8a54d6f5f28ad69f68ff0c87b7306ef5f1227c9df506ccbf61",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge63.png",
+      "hash": "0d456ef0b205b44d1ef5d1a1b9f5fb8a65242225db277b7832b4175189d3a744",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge65.png",
+      "hash": "7723f05a212502d3ecc86dac34ea645be78c8b14d285ede7ab070f94356d5c6a",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge68.png",
+      "hash": "5855736c270c832be112a983ba0e63b2fbd4952a341290a1253cf9d710ec3d1b",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge72.png",
+      "hash": "29a16967c55ce39823ddf59edf23dbfdb6bd5b9e0245787263c95d198faac9b4",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge87.png",
+      "hash": "218862e289720cf1269971577d92f5c3bdff39df4cd7c58645a3d6fb4924caa4",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge94.png",
+      "hash": "06ecebd244199c449ad0ca3f881b7159741b424b77503530ed94e326d93209d9",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/bridge/bridge99.png",
+      "hash": "a13a58752f10ed21f96310e8d189d251608074deda21f899fbc5c4b11549eb8b",
+      "class": "bridge",
+      "mapped_configured_class": "Bridge",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean19.png",
+      "hash": "48d09c85746fb892de22d36acdd138b82284fc5c60bff5fe624948c932f55868",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean20.png",
+      "hash": "ff8e27c9c934e9453394793d1b22f84ddac44f2a6dae11d1fbbbab6268552f03",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean23.png",
+      "hash": "f2fe1b3ec8a84705196387e886f2b703e4d8dd2494c2a279203ee4b319d53de3",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean24.png",
+      "hash": "d5af3e3d87b1765c3a6c409a28fc0b742a7393902cb3800d85855c257314091c",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean31.png",
+      "hash": "6d805b57fb1acc7d973e0935383fb7aec603e1197e3736fc5ebc64055bbc3ffd",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean32.png",
+      "hash": "873f06565bc1b8f533a5aa1d339c59aae8b3cc895f0591d2570fb6bb081af4d7",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean41.png",
+      "hash": "aa908aaa3ad5f634c38b17389053d26ee8a1641d511fc7c8a41e78b0b7af68ff",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean43.png",
+      "hash": "3639e45e20813d8ec4b660333104c8f282698c99db3052009cd6c4a1c4c2d617",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean48.png",
+      "hash": "cf11498c706e255b00f05513d5121ed65a8fa30aba9bfdceb4043105cfb6ee3b",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean58.png",
+      "hash": "282547e6eec39dbf7a9f670a967ec4863d2434ab257e99a34f45bc8dbe0a30b1",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean68.png",
+      "hash": "ae482e563b9c716cc28290ce84eb342a245acd311d16fbd7cd09a02005841b50",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/clean/clean69.png",
+      "hash": "1c715fc960c6ed5695157b67fb469de0cc5dfc6dde6b142baa128373aea4fb0e",
+      "class": "clean",
+      "mapped_configured_class": "Clean",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp106.png",
+      "hash": "01f9b2a7ded9347ecff565f56f80c0efbd28a6f7e4f60f53331b5a7b747c9538",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp111.png",
+      "hash": "a02c69c376d72be1281ca2eeeed34c9977700e97356543895c7730b5536520fd",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp117.png",
+      "hash": "6bfd680c766686cf1575ed03ae3c2d34c0856e04e5897e143a56238f36ecfac1",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp118.png",
+      "hash": "911573c3d88fd9825d53d8aa2642ad43b13fa6e8a9d9b2cc8c4d0009897276f7",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp123.png",
+      "hash": "24bc278f7ee008402c7a6b512de51f367c1f9856480c6c9b4f16a8e91cb0dd71",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp129.png",
+      "hash": "5938b509dbcfafa96bca5861140a9cbb01d82e41de796bdf27d2854b52852d22",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp13.PNG",
+      "hash": "01bf1eae66de29381800301d4512ccf2dcc32259eba19db5a5565710180aa841",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 194,
+      "height": 170,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp132.png",
+      "hash": "2b9fb13b6d8c01f1d27d01a9cc3ccc502ba13007ea082b2979b7b8728f72b088",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp136.png",
+      "hash": "6d603b9556a2ddc72aa6eab012ab75d88bb3717152f176fcf71d8d35f369149c",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp145.png",
+      "hash": "0f74a850f82f323fd9c52f3e64b1bf4e2786ae7a4233a19ce8792928c43d783d",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp159.png",
+      "hash": "75da8987e7dc0b384b655f64a027cc69a592b8b4fa7cdaf28aac6ec8afcb3e6a",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp16.png",
+      "hash": "99a01d939fc81ea7efe18cda03a5ea8ce8f320c63c2e9a2b2e7fb27b42030520",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp18.png",
+      "hash": "27feed7f5eb06080525acb617a197c2b05887de64ae2569af28ab3505eeaf0f5",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp30.png",
+      "hash": "f9a92a0765fef64fdbf9b4b85c3c8ae78f11f6c81924cfe94bcbc265eb9cc7f5",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp32.png",
+      "hash": "2ed6395d9a1ad25a6a69c6877b56fc11b19b41d63e93ddcc92fb9ebbb47e704f",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp39.png",
+      "hash": "0b16b478cce0191588cc5c53e18a5d8287d87be949c3f8a589c8702604daa882",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp52.png",
+      "hash": "77eb6344d5e8805c59470ee67cb65506fa47a29e5ac0de7f2f5523c8187ad588",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp53.png",
+      "hash": "5f033bbb053424dd80f2d702f5b896ad931dabf19db0a20ec781adef7b5c353b",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp7.PNG",
+      "hash": "a2167307376d9af5e186be66199d717699a50e125a24a4346c777322efd9e6b7",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 358,
+      "height": 389,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp73.png",
+      "hash": "8624ffb3ea9c694179f394e3920047169122ade10451ec9eaae061938bc03a36",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp78.png",
+      "hash": "1803041178725d71a90269861271fbb24ee9869b19ce0e0b333661df7550c40d",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp8.PNG",
+      "hash": "c9a9b8eb922ee749f8ea6d7aae18fc1fede8ae905d0e9f1f803a217dc0c2bda2",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 189,
+      "height": 168,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp82.png",
+      "hash": "602a565de6abfdb47f9629ae9e1d10407089041b438f87c4a661283eb9481951",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp84.png",
+      "hash": "51e912b58dec9590239e2d2de9072d525c99ace4b6c70b82776ab76459b319d7",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp89.png",
+      "hash": "8de9e37b41687b797eb39f15be8cb341768b821c6d29ad0ebecaf6ab3ea3d9a3",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/cmp/cmp92.png",
+      "hash": "b178de3e9bdc736ff6f6e5ce4d86718ee749e37fb6fb9ccbd4d471492f9fe6d5",
+      "class": "cmp",
+      "mapped_configured_class": "CMP",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack12.png",
+      "hash": "a2a0b65fb4c946fca8bd2852170b494c3a4d075e43643c929ff55911f3624f12",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack124.png",
+      "hash": "64a8d5f511d9b9ce796e6b87a21cacc1c960b2dd6e9420bb49bd609c342108ae",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack133.png",
+      "hash": "92ab26ec1429fddcb092d0652b7ef26760a1da971edec1eac302b8934142b687",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack137.png",
+      "hash": "2712dc5b9406ea2df0d7981b6336c6b3213059bbea236c88011023c6cb110791",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack138.png",
+      "hash": "abd3de2fa54007d81debf031217521aefcc370f23f554a689bac739554cd82f4",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack144.png",
+      "hash": "c3507ee468520f39cc251b6f20ada4e71a5a23bd06ecfe6866a722d6ced420dc",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack154.png",
+      "hash": "f9488a1cf64c7dd14cf3c81246c4bb9f3624f4d02d587a876e1bdb3cdf49caa7",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack155.png",
+      "hash": "5fbcbc5afe201fcadef9af59411cd57dd6217cad5fddb333e3368b17fa4c8a5e",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack159.PNG",
+      "hash": "1e44e9a321e9378ee12f57154f51d45dd6467cdc31779fad23aacbc51cf930b0",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 122,
+      "height": 106,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack3.png",
+      "hash": "5018d345bbbf30665cf7cad4da2d5653157e45132ac7d0ed4ec37a2157305000",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 641,
+      "height": 627,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack33.png",
+      "hash": "cf9e6e331d3bdadece4cfe7413beab843f066c6ee6f8f069b0bee29eab2dce03",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack48.png",
+      "hash": "56ac632ee158bf4cf44b68da58fd2d62cab95009443e574a4e6884c6817bad3e",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack50.png",
+      "hash": "e4b1abd20efb624e781d37eff7743b8c72faff992d3dc8fc9af8a15b9da05f22",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack56.png",
+      "hash": "58d167f94623c28d02d66e6e8c38ca941af00762856049af4718a20bbd9a402f",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack58.png",
+      "hash": "a4f64c1e0d18720a8491872ea06945c681063c472e95c019ee21a825bd38a27b",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack66.png",
+      "hash": "4dddd36f545757ea8f9d51e6b83c2d80915980ee86fe1d3a04d28854db50d263",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack72.png",
+      "hash": "b339e50132d03e97830fb5d872435495c37922a584c651aa161ecdab902d22ae",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack75.png",
+      "hash": "8f8ea2be201d269e48ad3ef7f9e047ce86b2b88403237ae96d913c6733123811",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack77.png",
+      "hash": "cba6d5573159e2d4bca617cd8c7cbb3d23786cb8cac790a8604c226867814df7",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack82.png",
+      "hash": "bb37c0a6278bce320c718b4eefcc2ba3080e924267d225d8bb53243df21957f3",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack86.png",
+      "hash": "865d9b90e2e78a6d9d2499aa3a81a55c232f496372f950b6e8a5bf7563585d81",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack87.png",
+      "hash": "c31e123f93de7f5ec908d68998543f3ec5fa005366a5d978d260ce19efbe9b4f",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack90.png",
+      "hash": "ddfef30f34306c9cfabdff32f4d481a1dbe0537c4759b519146bb411d0251f2e",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack93.png",
+      "hash": "fb5cd6999814deeebcc48bcf6a0cf97f7c801c7b59282e9b2010963a20299cf0",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/crack/crack98.png",
+      "hash": "f7f91c4d9d856677196df2f9ad859e8e49ab9b4a4c70c5ea334721819cb89e68",
+      "class": "crack",
+      "mapped_configured_class": "Crack",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open100.png",
+      "hash": "8570d5c5beab700504789061075834900238af89ef3dcac75fad84edeecd8bbd",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open106.png",
+      "hash": "04005eadd59b428e74b93baa8957b860248bd70ab4d116e58dbc0b8bcf42df6e",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open129.png",
+      "hash": "ebc229a11d7276e4e57711b7d6c5f1ec8551b46caf756f4fe6c2766de48d7aed",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open136.png",
+      "hash": "3774f8ff06a549b122401198744072c4cd653e32a50e0bc493f11d0cf6d396a2",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open141.png",
+      "hash": "a56ff92981c4d436b9961a9cc885aa320dded825927895b17fe92f7e85452eca",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open147.png",
+      "hash": "43cb27f826d27e8b6697f23c9e3f104ab1123c569977ecdab2f5e3f48b03f0b7",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open15.png",
+      "hash": "36e7cca207c65589dc2be132b5f133180e17b1f09c8d44affeaa1dc464c02d1d",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open151.png",
+      "hash": "1b5db503d95442c5d0489ca8c87c435e49c82dd299e9f78a3ac369eb9caa7e99",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open157.png",
+      "hash": "2fc0d89fd7f870a3f26b47527c1f5aaac2ed1ee88d68acd65165c5775caa5591",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open23.png",
+      "hash": "48eaf99addd7242b7718f1be89ca0ac9e85306f3dd2a52b80e3287633b3e3d27",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open25.png",
+      "hash": "e07effcda9d33cfde737a71d9922b2c3bfedbe66cbe4186cefc56b35b87a0efc",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open37.png",
+      "hash": "399750630595b78ddf82f60ef04bfbbf4d1113704a41d3c3b4457f7f13760038",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open41.png",
+      "hash": "1270c3b92c486a0da97f467dd0b0aec2ed77320b7b4c20883b0bd7637a21fa90",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open48.png",
+      "hash": "3a8d81c31c8f26abf8b671eb72f87cb7abdeffb715675385ad83f67e7b8f5084",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open49.png",
+      "hash": "36d236a563938b395271e7baf677868b500f6f9533c62207b7cf844473eacf5c",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open55.png",
+      "hash": "10852b401f8d378dde6b8ee9cbae4ec8947f23e2141edffe7d0a2f88bd69da1b",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open57.png",
+      "hash": "b4255f501b5fafa63b6cb6975954eb01ff429fb267335c0c55bf948f694a160c",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open7.png",
+      "hash": "853b9444ef30bf3bd3b0436eba5291b7780628167eb38a500b2822c8c2b28886",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open70.png",
+      "hash": "415bb9d5a788aab69968b20341e4ff96fe8c4b9c9a7e779287325dbc957f4440",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open75.png",
+      "hash": "ea3c4af26963aa272f918303bceb9325c663904e8584bf35cbe70fde22c995e9",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open81.png",
+      "hash": "b542027c5285d5dbc8967b30202231c63c4c9407a0bfd7f00b36d10e31b7e8f0",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open83.png",
+      "hash": "a489e92a68dc3d090b9d57dde81e0cfafd23531e10aff2fa06ae7b45bf0e4ac7",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open97.png",
+      "hash": "f7a07e065e2e8ba3951c51bce0ff172af7c67946532e7121459131484d4b6c28",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open98.png",
+      "hash": "67250350e73f831c295a8611cd3c1a3d52f09e73a2db4b78461cd635bdc68e57",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/opens/open99.png",
+      "hash": "8202a9c04b5908799270cfe78273c8682cecf07820a33f05cae705bb345687bc",
+      "class": "opens",
+      "mapped_configured_class": "Open",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others 4.png",
+      "hash": "b73a167747e95220730dfc28fd326b45070f82d6ec0b317135acc3310acad237",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others 6.png",
+      "hash": "7be4f5844253b4f3ca2264d9034b95a7ffdc73f126d531c2d2416e0079388735",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others17.png",
+      "hash": "ec5915b7187ea825c2bad3f3ce7af3e907f9468b2a9e0d92d0c86bb274471a50",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others22.png",
+      "hash": "0f2bad819b51ac4fe24bd923ab6ecb4c03496d1963372dd852802dc6938fe1e9",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others23.png",
+      "hash": "b63718325b031b32f2bad3dd5c7ab843a55db6ee6def332b3f66a50481f568ba",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others39.png",
+      "hash": "7ef0c22efe3d55366e46017a03dbbda33e24c9611ba757c885dd00ee20043e87",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others41.png",
+      "hash": "ac3db601614486869642edcf49c328ee51893a2851ed0d2513cf8550188ddf0c",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others47.png",
+      "hash": "9790fd56af5c37477b5031a13a0819d64e20890d996edbc89bd1c220b3f1235f",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others62.png",
+      "hash": "30bb75d9ee09a583bc5b6861fe3ba36dc416f7921090d2c0c0ef599649d195a3",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others63.png",
+      "hash": "6b49924f2fa485e6e126733dc2fe5833ca2b850ad62cd9f713a365a84c51621e",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others65.png",
+      "hash": "bffcd45b14aa44ca0f27d6cb99a967f0465f55425bc2ccb4db4b23669d28022e",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others69.png",
+      "hash": "4bd4e17f20bf0add6101f152c36e6a5a51509f83c601a38f70235da8b041e2e1",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/other/others72.png",
+      "hash": "73237885b2c0a80668152445d40b93b72f646df946b5bb31f44de46c2bfee3dc",
+      "class": "other",
+      "mapped_configured_class": "Other",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle10.PNG",
+      "hash": "4321e9a75b48fd957bf29000f4c496c17a7299196aee9fa48b1795a12219f8db",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 343,
+      "height": 287,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle100.png",
+      "hash": "d3b860942b00d352896ad6d1b22bbe0aa1cd454694ff63d4046867ae83d90f52",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle116.png",
+      "hash": "dabd1f45d1d7799d62820cc036fcec668cac282aa932217ab525ccb259a343aa",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle118.png",
+      "hash": "a1a69f65ee83dae684a1828718c8f70605ba47c781a7c2eeb68a88c9b3e2ed51",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle123.png",
+      "hash": "0a2ce725ae8cb2bd473f3fe0168cc48312418c53f35828e4df55344b9c28471f",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle130.png",
+      "hash": "455d761ad05987f602db45aa4c6229a379c20f3066de2f49d899753aa4a367dd",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle147.png",
+      "hash": "f4387ad99bab1c0262b0c25ddaffd774c65d14e6a8b347b27225ed27bd428598",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle18.png",
+      "hash": "fab03b306db2738592df0fe6e433a45432295191909711aa415aa2ba6bd58e7c",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle20.png",
+      "hash": "30db5dc791e7c37c97b29b0a0c93de66d1d55c1aa1101c0c33b2cf6e71e594b3",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle21.png",
+      "hash": "0d460a443b9ff11b6d82e1acb4272101df2f34b10943b763a9a5682c79590448",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle28.png",
+      "hash": "3ebe541f351268801f95c1b3aa683208bb987722b704abe0435a8ee678662910",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle31.png",
+      "hash": "c4bccb51db1369f72b110a8ccc53173e10cfaf837d39c9c208c6fbd752f675a9",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle39.png",
+      "hash": "fd8834e6991e745b8b4586fb91328b8d3f65ef9353d2e86211cbfbcbe01c131d",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle41.png",
+      "hash": "fc675868ded0c5e4c7e4c4cd3041a68bc454d017a65aa5f1204f67fb3902146e",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle5.PNG",
+      "hash": "2191d6b0dc67baea254eedade2058bc0a5e15cd8b65cb836f58b4ec6a87bc670",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 163,
+      "height": 167,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle58.png",
+      "hash": "cbb75a90da598edfc2d86b5da780f7c6827aa70fb4993e8191ed19a8f6222055",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle59.png",
+      "hash": "9cc9e656eb9d4c06c96bac98355ae03379a0bc2ea1773ad94cedada80171a216",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle6.PNG",
+      "hash": "52f07fe6c6f69949e90172cb6783b825065e6088933b8572b0b19b8105a3da05",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 169,
+      "height": 166,
+      "mode": "RGBA"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle66.png",
+      "hash": "dab958a60291593b6791cf954d3982c705a9ac8b4be5a9ef001ca7a8cf35468e",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle76.png",
+      "hash": "2b140324c4a93a9c6fba2e8bfcabfc47e92338e6d73ca5040aecc4a7c77780f6",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle78.png",
+      "hash": "ebe17cffd29f63b5bae992a610685410a684d94832ebd99d171f5b9adf9c0507",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle82.png",
+      "hash": "34d5fd69afb00940a619bba132ad96db7610640596fda76d2c1df9c550620aa0",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle87.png",
+      "hash": "1bc3507717e608aa24dcb015f2e873fd601515293c9847edd018a5df3f6fa055",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/particle/particle97.png",
+      "hash": "2805517efae6e145c29a298786ac00021b56c4ed535e877639d71a3e0649873e",
+      "class": "particle",
+      "mapped_configured_class": "Particle",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch1.png",
+      "hash": "6eedbec0dd480fc7f161409c7a4057f5a81492ced7ea67dd4300f850f802f082",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch125.png",
+      "hash": "5e5a443929feb45fd7aff37eeda7fa212d5046784e1ffa59071b2b5861f21acd",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch127.png",
+      "hash": "43f6d3cb5443e52260ec36b455bd7c4c955948e9eb758bc00ba1a375d6593d95",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch132.png",
+      "hash": "9fc249e2611e6647167e8e6dc01eab59379c4cbe71f96b6c992bfb55c84cec3a",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch136.png",
+      "hash": "6222f1183e43865b19f8a873ba9a020e31b90d6425ce17936e3ffd64dd102363",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch138.png",
+      "hash": "0506b1a924461fc8106678b28936760908a9075eb4d5303f064beeeb913b7fcc",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch139.png",
+      "hash": "66d232e46ff3dea2694319a6abbc2ea4a729c35515b2bdd05ec548a28449a617",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch142.png",
+      "hash": "b6b7aed1924e64be80ee42ba4a9466c70f325d378647a431d5d8321fe3eacfd2",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch143.png",
+      "hash": "84a7fbb5a42711070652371afd3d9f9625bbb2e0ba09648e574d917e063532ea",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch144.png",
+      "hash": "95e743a0913aac654d80ace0f659ecb988742f4137844f9a6800874acbee6abf",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch15.png",
+      "hash": "6f2b331786423c94a4bf4123012e2c973b0402a329093939fc75722c9973ec65",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch41.png",
+      "hash": "5801420164925b86cc9a8e665635464bd3723861468921a2fee3a5fda6a62eea",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch42.png",
+      "hash": "cdc69b6b3b4e5d6234a41ea89e246b6c370196944c87e0ca15f75719a92e95d9",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch5.png",
+      "hash": "f3c8993874cb7d13df8df83aeb907b46c8169aaf47062914656d21cd74182c64",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch53.png",
+      "hash": "92dbbd902d473309800d23083d9edb58b8ce998845583da925c3dfefad03aab6",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch54.png",
+      "hash": "034b0ce2aa35749cf3edd0c0925b4140300fab26cce56a13395672bcb6f9fad9",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch61.png",
+      "hash": "ee808b23d77ccd30f5da35fa0202281ceae896000f33183cd58e2c87ed1d27a7",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch73.png",
+      "hash": "b7f890c6148c5d788f062e05cc26262363a1218558c334a5f917d166cb7c05ec",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch74.png",
+      "hash": "5835e638c1d2dca63d412a966d4fbab50e0d216dfa9867991ff882c45656220d",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch76.png",
+      "hash": "260b1015943e0be079c9417a4227e78ba99d4cfa10e49af31f8f1a122de90262",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch77.png",
+      "hash": "f00f079c00e5b511255193cbb6f85e21afc5ef6779333a88ef4b9f7fe1a821ac",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch89.png",
+      "hash": "6944be2bd87ef247a648edc211be09da30869ef882cbac32efabc4c7b6c752da",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch9.png",
+      "hash": "8d4e6be1c011785863dcdb33fada90664ecd6ddc5a7eed64d5b67f75e857fc8a",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/scratch/scratch98.png",
+      "hash": "85e7a705c5916a9a5921d9be39690d4baac8ff70a7ff65688121cbe379ccb875",
+      "class": "scratch",
+      "mapped_configured_class": "LER",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias101.png",
+      "hash": "6207ec1f91fbbe524bbe3622d517cdc5f9002b18bb7380a7c40030b04d17e74a",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias103.png",
+      "hash": "7e60311f9e5e4cf2c27e6474a172f77effda49755860a087a8439eddfee37ebf",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias106.png",
+      "hash": "b9f7e5b77f7e791499592df6569c9751f6fe8aaa31b49cc70c77ea26ab972a35",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias108.png",
+      "hash": "0a700c48b06ab211c6cf565a0d2461a439a9f97f44afd5c892450882b77fe1a3",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias111.png",
+      "hash": "6bb7100e04e50870a756e1aed4dcba59f0060c1e52aa7d093073fa3827437b0c",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias112.png",
+      "hash": "1eeb759bda6b5f29fa3df10a9f3a86710dec57d76ffc68d4578d12bed213bb74",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias128.png",
+      "hash": "23625eece162a6ccb75976f79cdb268344dc2f9e99d3aa1827b5a54ebb842c1a",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias131.png",
+      "hash": "c8946fe1ad9ca32abb1e24515ab9f3d91b1ea331de9d7698196482fa059f3173",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias137.png",
+      "hash": "b3a269dad54f4108579d5478fa9e04aec43c8cf258fec72ea3c125b9a2fc1d0b",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias15.png",
+      "hash": "1a05a7b6fa85b7804878d423fb4eb6bfbff23c11effb85c45a59326c3b4874e4",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias150.png",
+      "hash": "2547df09d930900ca5004e21f8224c46dc2e588993aa3b40895318a4565547b4",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias153.png",
+      "hash": "bbbc52c02f5a0dcbe36244c60162ed74d043d1f9096076c47348525939eb5671",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias154.png",
+      "hash": "e1bff62be8a58479984e4e83597f5ebc0bca9bb2e3b2d058e54b0de51d96825c",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias23.png",
+      "hash": "d6ae7b4645c4ddcb3e2e01bd58a27c12a66d2fddc982648bca184d59d6bee632",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias30.png",
+      "hash": "8fbbe38900a5092add85a4905699074d963fc7d3606d43a238b5a4cce4d20340",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias36.png",
+      "hash": "9c7810b6c868bf95b26daf64565019d81975dabc51d0726e4a1a37a4ea42c7e6",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias44.png",
+      "hash": "6b8d947c88c914cb51800100304058f1439b8ecff0925d89d5aa0f534a5ff662",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias50.png",
+      "hash": "b7608a8c2fb3f976652b139e92e8ed711425be31a2cfed7f07d3ac07b2c351e2",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias58.png",
+      "hash": "936a44258d5b9cb50526f1bea4690f7c45d6cf86c8022d363d0a292f9af8a667",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias70.png",
+      "hash": "ac9feea030f95a9493ff441d69fc64a8e9b4d10392b9e4ebfc5ff49997a48031",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias87.png",
+      "hash": "537ca282b85545c432b1fb682bbd4daed95b1deabd11bd859afe7b021fb2f6f6",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias90.png",
+      "hash": "2fc77bc929678e2fe946739b1a2602e68af6548d29e51daffbe9a84cac345e7d",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias92.png",
+      "hash": "5869581466fe0a459d16fa19715af57225bcf56882899cb6b5e2a1c831683fad",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias93.png",
+      "hash": "2ed8e1278cf8cfa73534f2cc328924588b4bdfe9a3320fa50e431068282bd44c",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    },
+    {
+      "relative_path": "datasets/calibration/dataset/train/vias/vias94.png",
+      "hash": "36f811a3ff4b713d652ee4de22ef8690d91a5338deb7d6ca25a6bc06efc5b5b4",
+      "class": "vias",
+      "mapped_configured_class": "VIA",
+      "width": 256,
+      "height": 256,
+      "mode": "L"
+    }
+  ]
+}

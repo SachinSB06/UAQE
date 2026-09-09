@@ -1,0 +1,3 @@
+{
+  "quantization.default_precision": "FP32"
+}

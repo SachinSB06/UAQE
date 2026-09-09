@@ -1,0 +1,25 @@
+{
+  "input": {
+    "name": "input",
+    "shape": [
+      "batch",
+      3,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "layout": "NCHW",
+    "channel_count": 3
+  },
+  "output": {
+    "name": "output",
+    "shape": [
+      "batch",
+      10
+    ],
+    "dtype": "float32",
+    "output_dimension": 10,
+    "number_of_classes": 10,
+    "argmax_axis": 1
+  }
+}

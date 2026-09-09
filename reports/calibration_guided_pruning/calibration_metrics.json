@@ -1,0 +1,22 @@
+{
+  "R1": {
+    "tflite_accuracy": 0.83,
+    "onnx_accuracy": 0.84,
+    "cosine_similarity": 0.9967057108879089,
+    "mean_absolute_error": 0.1293022185564041,
+    "rmse": 0.17013569176197052,
+    "prediction_agreement": 0.99,
+    "nan_count": 0,
+    "inf_count": 0
+  },
+  "R2": {
+    "tflite_accuracy": 0.83,
+    "onnx_accuracy": 0.84,
+    "cosine_similarity": 0.9967057108879089,
+    "mean_absolute_error": 0.1293022185564041,
+    "rmse": 0.17013569176197052,
+    "prediction_agreement": 0.99,
+    "nan_count": 0,
+    "inf_count": 0
+  }
+}

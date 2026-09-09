@@ -1,0 +1,32 @@
+{
+  "actual_number_of_classes": 9,
+  "actual_class_directory_names": [
+    "Bridge",
+    "CMP",
+    "Clean",
+    "Crack",
+    "LER",
+    "Open",
+    "Other",
+    "Particle",
+    "VIA"
+  ],
+  "image_count_per_class": {
+    "Bridge": 32,
+    "CMP": 30,
+    "Clean": 33,
+    "Crack": 31,
+    "LER": 30,
+    "Open": 30,
+    "Other": 50,
+    "Particle": 30,
+    "VIA": 30
+  },
+  "total_valid_images": 296,
+  "corrupt_images": 0,
+  "grayscale_images": 197,
+  "rgb_images": 99,
+  "image_extensions": [
+    ".png"
+  ]
+}

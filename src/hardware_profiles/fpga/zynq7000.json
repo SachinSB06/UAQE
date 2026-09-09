@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "zynq7000",
+  "display_name": "Xilinx Zynq-7000",
+  "hardware_class": "FPGA",
+  "ram_bytes": null,
+  "flash_bytes": null,
+  "storage_bytes": null,
+  "tensor_memory_bytes": 8388608,
+  "runtime": "bare-metal-hdl",
+  "default_runtime": "bare-metal-hdl",
+  "supported_runtimes": ["bare-metal-hdl"],
+  "supported_precisions": ["INT8", "INT4", "MIXED"],
+  "max_model_size_bytes": 16777216,
+  "preferred_export_formats": ["MEM", "HEX", "BIN"],
+  "clock_speed_hz": 100000000,
+  "fpga_resources": {
+    "logic_cells": 85000,
+    "bram_kb": 4900,
+    "dsp_slices": 220,
+    "lut_count": 53200
+  },
+  "constraints": [
+    "PL fabric resources reflect the XC7Z020 (e.g. ZedBoard/PYNQ-Z1 class device); larger Zynq-7000 parts have substantially more capacity.",
+    "No native floating-point units in the PL fabric; FP32/FP16 layers must be fully quantized before export to the HDL backend.",
+    "Recurrent layers (LSTM/GRU) unsupported in v1 HDL backend.",
+    "Dual Cortex-A9 PS is not modeled by this profile; tensor_memory_bytes and fpga_resources describe PL-side inference capacity only."
+  ]
+}

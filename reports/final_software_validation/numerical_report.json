@@ -1,0 +1,29 @@
+{
+  "fp32_vs_onnx": {
+    "cosine_similarity": 0.9991791248321533,
+    "mean_absolute_error": 0.053995050489902496,
+    "rmse": 0.06993342190980911,
+    "max_absolute_error": 0.38736268877983093,
+    "prediction_agreement": 0.972972972972973,
+    "nan_count": 0,
+    "inf_count": 0
+  },
+  "onnx_vs_tflite": {
+    "cosine_similarity": 0.5332152247428894,
+    "mean_absolute_error": 1.1599183082580566,
+    "rmse": 1.4809712171554565,
+    "max_absolute_error": 5.65277099609375,
+    "prediction_agreement": 0.34121621621621623,
+    "nan_count": 0,
+    "inf_count": 0
+  },
+  "fp32_vs_tflite": {
+    "cosine_similarity": 0.5310065746307373,
+    "mean_absolute_error": 1.1633189916610718,
+    "rmse": 1.4836653470993042,
+    "max_absolute_error": 5.600132942199707,
+    "prediction_agreement": 0.34121621621621623,
+    "nan_count": 0,
+    "inf_count": 0
+  }
+}

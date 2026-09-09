@@ -1,0 +1,79 @@
+# ==============================================================================
+# Universal AI Quantization Engine (UAQE) - .gitignore
+# ==============================================================================
+
+# Python bytecode, compilations, and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Testing and Quality Caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE & Editor Metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.gemini/
+
+# Node.js & Frontend Build Artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# UAQE Runtime Outputs & Job History (Automatically recreated on startup)
+output/
+scratch/
+archive/
+src/output/
+src/outputs/
+src/logs/
+src/reports/
+src/scratch/
+*.log
+
+# Sensitive environment configuration & secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.cert
+*.crt
+
+# Large raw datasets and archives (Manifests & small calibration sets retained)
+datasets/raw/
+datasets/*.tar
+datasets/*.tar.gz
+datasets/*.zip
+datasets/imagenet*/
+
+# Models Policy: Keep verified demonstration models, exclude temporary conversion files
+models/temp/
+*.tmp

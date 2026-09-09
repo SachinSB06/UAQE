@@ -1,0 +1,51 @@
+{
+  "experiment_meta": {
+    "date": "2026-08-25",
+    "hardware_target": "raspberrypi5",
+    "runtime": "tflite-runtime",
+    "calibration_dataset_manifest": "D:\\Quantization embedded\\datasets\\calibration\\calibration_manifest.json",
+    "test_dataset": "D:\\Quantization embedded\\datasets\\hackathon_test_dataset"
+  },
+  "safety_checks": {
+    "production_config_unchanged": true,
+    "production_exports_unchanged": true
+  },
+  "results": {
+    "M0": {
+      "test_accuracy_tflite": 0.36824324324324326,
+      "test_accuracy_onnx": 0.375,
+      "parameter_count": 1522058,
+      "onnx_size_bytes": 3074553,
+      "tflite_size_bytes": 1732368,
+      "latency_mean_ms": 7.958316000012928,
+      "latency_p95_ms": 10.471424999741428,
+      "throughput_fps": 125.65472393888048,
+      "memory_inference_rss_bytes": 421502976,
+      "memory_inference_delta_bytes": 1732608
+    },
+    "R1": {
+      "test_accuracy_tflite": 0.36824324324324326,
+      "test_accuracy_onnx": 0.375,
+      "parameter_count": 1522058,
+      "onnx_size_bytes": 3074553,
+      "tflite_size_bytes": 1732376,
+      "latency_mean_ms": 4.3392279999898165,
+      "latency_p95_ms": 5.763204999993832,
+      "throughput_fps": 230.45574005384066,
+      "memory_inference_rss_bytes": 423047168,
+      "memory_inference_delta_bytes": 1732608
+    },
+    "R2": {
+      "test_accuracy_tflite": 0.36824324324324326,
+      "test_accuracy_onnx": 0.375,
+      "parameter_count": 1522058,
+      "onnx_size_bytes": 3074553,
+      "tflite_size_bytes": 1732376,
+      "latency_mean_ms": 16.22912599999836,
+      "latency_p95_ms": 33.630144999460754,
+      "throughput_fps": 61.61761267982645,
+      "memory_inference_rss_bytes": 424947712,
+      "memory_inference_delta_bytes": 1732608
+    }
+  }
+}
