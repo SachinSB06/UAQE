@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "tsx src/tests/test_candidate_metrics.mjs && tsx src/tests/test_candidate_normalization.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
@@ -32,6 +33,7 @@
     "oxlint": "^1.79.0",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
     "typescript": "~6.0.2",
     "vite": "^8.2.2"
   }

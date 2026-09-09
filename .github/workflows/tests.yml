@@ -68,8 +68,8 @@ jobs:
       - name: Run Candidate Metrics Logic Unit Tests
         working-directory: ./frontend
         run: |
-          node src/tests/test_candidate_metrics.mjs
-          node src/tests/test_candidate_normalization.mjs
+          npx tsx src/tests/test_candidate_metrics.mjs
+          npx tsx src/tests/test_candidate_normalization.mjs
 
       - name: Build Frontend Production Bundle
         working-directory: ./frontend
