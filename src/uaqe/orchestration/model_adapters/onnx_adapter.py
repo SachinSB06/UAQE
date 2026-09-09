@@ -7,8 +7,15 @@ and validates execution via ONNX Runtime.
 import os
 from typing import Dict, List, Tuple, Optional, Any
 import numpy as np
-import onnx
-import onnxruntime as ort
+
+try:
+    import onnx
+    import onnxruntime as ort
+    HAS_ONNX = True
+except ImportError:
+    onnx = None
+    ort = None
+    HAS_ONNX = False
 
 from .base_model_adapter import BaseModelAdapter
 
@@ -18,12 +25,17 @@ class ONNXModelAdapter(BaseModelAdapter):
 
     def __init__(self, model_path: str):
         super().__init__(model_path)
-        self.onnx_model: Optional[onnx.ModelProto] = None
-        self.ort_session: Optional[ort.InferenceSession] = None
+        self.onnx_model: Optional[Any] = None
+        self.ort_session: Optional[Any] = None
         self._descriptor_cache: Optional[Dict[str, Any]] = None
         self._load_model()
 
     def _load_model(self) -> None:
+        if not HAS_ONNX:
+            raise ImportError(
+                "ONNX and ONNX Runtime are required for ONNX model inspection. "
+                "Please install them via: pip install onnx onnxruntime"
+            )
         try:
             self.onnx_model = onnx.load(self.model_path)
             onnx.checker.check_model(self.onnx_model)

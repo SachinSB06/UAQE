@@ -28,7 +28,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-runtime.txt
-          pip install fastapi uvicorn pydantic pytest httpx
+          pip install onnx onnxruntime safetensors pyyaml fastapi uvicorn pydantic pytest httpx
 
       - name: Verify CLI Help and Arguments
         run: |

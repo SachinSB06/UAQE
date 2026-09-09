@@ -7,7 +7,13 @@ and executing validation via TFLite runtime.
 import os
 from typing import Dict, List, Tuple, Optional, Any
 import numpy as np
-import tensorflow as tf
+
+try:
+    import tensorflow as tf
+    HAS_TF = True
+except ImportError:
+    tf = None
+    HAS_TF = False
 
 from .base_model_adapter import BaseModelAdapter
 
@@ -18,10 +24,15 @@ class TFLiteModelAdapter(BaseModelAdapter):
     def __init__(self, model_path: str):
         super().__init__(model_path)
         self._descriptor_cache: Optional[Dict[str, Any]] = None
-        self.interpreter: Optional[tf.lite.Interpreter] = None
+        self.interpreter: Optional[Any] = None
         self._load_interpreter()
 
     def _load_interpreter(self) -> None:
+        if not HAS_TF:
+            raise ImportError(
+                "TensorFlow is required for TFLite model inspection. "
+                "Please install it via: pip install tensorflow"
+            )
         try:
             self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
             self.interpreter.allocate_tensors()

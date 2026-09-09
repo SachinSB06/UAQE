@@ -7,7 +7,13 @@ layer tensors, and metadata.
 import os
 from typing import Dict, List, Tuple, Optional, Any
 import numpy as np
-import torch
+
+try:
+    import torch
+    HAS_TORCH = True
+except ImportError:
+    torch = None
+    HAS_TORCH = False
 
 from .base_model_adapter import BaseModelAdapter
 
@@ -22,6 +28,11 @@ class PyTorchModelAdapter(BaseModelAdapter):
         self._load_checkpoint()
 
     def _load_checkpoint(self) -> None:
+        if not HAS_TORCH:
+            raise ImportError(
+                "PyTorch is required for PyTorch model inspection. "
+                "Please install it via: pip install torch"
+            )
         try:
             # Safe loading
             try:
