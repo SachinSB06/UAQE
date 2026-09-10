@@ -1,5 +1,10 @@
 # Universal AI Quantization Engine (UAQE) Dependencies
 # Python >= 3.11 (Validated on Python 3.13.7 AMD64)
+#
+# For CPU-only environments (CI / Linux without NVIDIA GPUs):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+#   (or simply: pip install -r requirements-cpu.txt)
 
 # Core Runtime, TFLite & FlatBuffers
 numpy>=1.24.0

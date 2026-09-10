@@ -11,6 +11,7 @@ jobs:
     name: Backend Regression & Architecture Suites
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.11", "3.12"]
 
@@ -27,8 +28,8 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements-runtime.txt
-          pip install onnx onnxruntime safetensors pyyaml fastapi uvicorn pydantic pytest httpx
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
 
       - name: Verify CLI Help and Arguments
         run: |
