@@ -1,0 +1,10 @@
+{
+  "job_id": "UAQE-20260909-131603-5C90DE51",
+  "model_path": "D:\\Quantization embedded\\output\\jobs\\UAQE-20260909-131603-5C90DE51\\inputs\\model\\mobilenetv3_sem.onnx",
+  "dataset_path": "D:\\Quantization embedded\\output\\jobs\\UAQE-20260909-131603-5C90DE51\\inputs\\dataset",
+  "target_hardware": "raspberrypi5",
+  "optimization_profile": "balanced",
+  "auto_approve": true,
+  "plan_only": false,
+  "created_at": "2026-09-09T13:16:04.731331"
+}

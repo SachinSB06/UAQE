@@ -1,0 +1,20 @@
+[2026-09-09T19:11:46.260193] Job UAQE-20260909-191140-11AA370D initialized.
+[2026-09-09T19:11:46.260223] Model inspected: MobileNetV3-Small
+[2026-09-09T19:11:46.260235] Dataset inspected: dataset (image_folder)
+[2026-09-09T19:11:46.260245] Optimization plan created for target: Raspberry Pi 5 (Broadcom BCM2712, 4x Cortex-A76)
+[2026-09-09T19:11:46.261265] Launching Autonomous Optimization Controller...
+[2026-09-09T19:11:46.270942] Starting autonomous optimization controller for job UAQE-20260909-191140-11AA370D
+[2026-09-09T19:11:46.273335] Measuring FP32 reference baseline...
+[2026-09-09T19:12:04.171804] FP32 baseline established: Accuracy=96.95%, Size=5.84MB, Latency=6.65ms, Status=VALID (FP32 baseline accuracy (96.95%) satisfies validity threshold (25.0%).)
+[2026-09-09T19:12:04.175056] Executing candidate cand_001: MobileNetV3 Static INT8 PTQ...
+[2026-09-09T19:12:52.123132] Candidate cand_001 evaluated: Accuracy=95.94% (Loss=1.02pp, ACCEPTABLE), Size=1.77MB (-69.7%), Latency=149.90ms, Score=0.6690
+[2026-09-09T19:12:52.158314] Executing candidate cand_002: MobileNetV3 INT8 PTQ + Magnitude Pruning...
+[2026-09-09T19:13:40.541721] Candidate cand_002 evaluated: Accuracy=95.94% (Loss=1.02pp, ACCEPTABLE), Size=1.77MB (-69.7%), Latency=142.96ms, Score=0.6690
+[2026-09-09T19:13:40.587869] Executing candidate cand_003: MobileNetV3 INT8 + Adaptive Sparse RLE Packaging...
+[2026-09-09T19:14:29.585050] Candidate cand_003 evaluated: Accuracy=95.94% (Loss=1.02pp, ACCEPTABLE), Size=1.77MB (-69.7%), Latency=140.34ms, Score=0.6690
+[2026-09-09T19:14:29.633785] Executing candidate cand_004: MobileNetV3 XNNPACK-Compatible INT8...
+[2026-09-09T19:14:38.348503] Candidate cand_004 evaluated: Accuracy=95.43% (Loss=1.52pp, ACCEPTABLE), Size=1.77MB (-69.7%), Latency=9.82ms, Score=0.6664
+[2026-09-09T19:14:38.384381] Stopping policy triggered: NO_LEGAL_CANDIDATES_REMAIN (Candidate search space fully explored. Best safe candidate selected.)
+[2026-09-09T19:14:38.385186] Selected best candidate: cand_001 (MobileNetV3 Static INT8 PTQ) with score 0.6690. Constraint satisfied: True
+[2026-09-09T19:14:38.869692] Warning: Detailed predictions evaluation omitted: [ONNXRuntimeError] : 7 : INVALID_PROTOBUF : Load model from D:\Quantization embedded\output\jobs\UAQE-20260909-191140-11AA370D\optimized_model.tflite failed:Protobuf parsing failed.
+[2026-09-09T19:14:40.627325] Optimization completed. Final Verdict: VERIFIED

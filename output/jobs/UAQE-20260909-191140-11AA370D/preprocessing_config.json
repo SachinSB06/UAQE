@@ -1,0 +1,55 @@
+{
+  "target_resolution": [
+    128,
+    128
+  ],
+  "color_format": "RGB",
+  "interpolation": "bilinear",
+  "layout": "NCHW",
+  "normalization": "rgb_0_1",
+  "mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "std": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "provenance": {
+    "target_resolution": {
+      "value": [
+        128,
+        128
+      ],
+      "source": "model_descriptor.input_shape (NCHW)"
+    },
+    "normalization": {
+      "type": "rgb_0_1",
+      "mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "std": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source": "framework_adapter.mobilenet_rules (rgb_0_1)"
+    },
+    "layout": {
+      "value": "NCHW",
+      "source": "model_descriptor.input_shape (channel_first)"
+    },
+    "color_format": {
+      "value": "RGB",
+      "source": "model_descriptor.modality"
+    },
+    "interpolation": {
+      "value": "bilinear",
+      "source": "project_standard_policy"
+    }
+  }
+}

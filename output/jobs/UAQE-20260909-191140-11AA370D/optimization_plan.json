@@ -1,0 +1,69 @@
+{
+  "optimization_profile": "balanced",
+  "target_hardware": {
+    "target_id": "raspberrypi5",
+    "name": "Raspberry Pi 5 (Broadcom BCM2712, 4x Cortex-A76)",
+    "hardware_class": "SINGLE_BOARD_COMPUTER",
+    "is_physical_measurement": false
+  },
+  "model_summary": {
+    "architecture": "MobileNetV3-Small",
+    "framework": "ONNX",
+    "total_parameters": 1522050,
+    "source_sha256": "616f53f5ef2a66e7028e075d2af204b20067ededffdf550a7696fdc476242711"
+  },
+  "dataset_summary": {
+    "dataset_name": "dataset",
+    "format": "image_folder",
+    "class_count": 9,
+    "train_samples": 877,
+    "val_samples": 184,
+    "test_samples": 197
+  },
+  "adaptation_plan": {
+    "adaptation_required": true,
+    "original_classes": 10,
+    "target_classes": 9
+  },
+  "quantization_plan": {
+    "selected_precision": "INT8",
+    "quantization_method": "Sensitivity-Aware Post-Training Quantization / QAT",
+    "fallback_used": false,
+    "fallback_reason": "None"
+  },
+  "compression_plan": {
+    "pruning_enabled": true,
+    "candidate_pruning_ratios": [
+      0.1,
+      0.2
+    ],
+    "sparse_compression": "Sparse + RLE",
+    "selective_clustering": false
+  },
+  "validation_policy": {
+    "search_split": "validation",
+    "final_eval_split": "test",
+    "accuracy_gate_max_drop": 0.02
+  },
+  "accuracy_safety_policy": {
+    "max_acceptable_loss_pp": 4.0,
+    "classifications": {
+      "EXCELLENT": "<= 1.0 pp",
+      "ACCEPTABLE": "1.0 < pp <= 4.0",
+      "CRITICAL": "> 4.0 pp"
+    }
+  },
+  "objective_weights": {
+    "accuracy_weight": 0.5,
+    "size_weight": 0.25,
+    "latency_weight": 0.25
+  },
+  "candidate_search_budget": {
+    "max_candidates": 10,
+    "stopping_policy": "TARGET_CONSTRAINTS_SATISFIED_OR_BUDGET_EXHAUSTED"
+  },
+  "export_target": {
+    "preferred_format": "tflite",
+    "runtime_package": "complete_deployment_package"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "dataset_name": "dataset",
+  "detected_format": "image_folder",
+  "adapter_type": "ImageFolderAdapter",
+  "dataset_root": "D:\\Quantization embedded\\output\\jobs\\UAQE-20260909-191140-11AA370D\\inputs\\dataset\\dataset",
+  "class_count": 9,
+  "class_names": [
+    "bridge",
+    "clean",
+    "cmp",
+    "crack",
+    "opens",
+    "other",
+    "particle",
+    "scratch",
+    "vias"
+  ],
+  "splits": {
+    "train_count": 877,
+    "val_count": 184,
+    "test_count": 197,
+    "total_samples": 1258
+  },
+  "class_distribution": {
+    "train": {
+      "bridge": 111,
+      "clean": 51,
+      "cmp": 115,
+      "crack": 111,
+      "opens": 111,
+      "other": 56,
+      "particle": 105,
+      "scratch": 107,
+      "vias": 110
+    },
+    "val": {
+      "bridge": 23,
+      "clean": 11,
+      "cmp": 24,
+      "crack": 23,
+      "opens": 23,
+      "other": 12,
+      "particle": 22,
+      "scratch": 23,
+      "vias": 23
+    },
+    "test": {
+      "bridge": 25,
+      "clean": 12,
+      "cmp": 26,
+      "crack": 25,
+      "opens": 25,
+      "other": 12,
+      "particle": 23,
+      "scratch": 24,
+      "vias": 25
+    }
+  },
+  "original_files_modified": false
+}

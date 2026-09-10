@@ -1,0 +1,5 @@
+candidate_id,candidate_name,strategy_type,top1_accuracy,accuracy_loss_pp,safety_classification,is_satisfied,model_size_bytes,size_reduction_pct,latency_mean_ms,latency_reduction_pct,throughput_ips,prediction_agreement_pct,composite_score,execution_duration_sec
+cand_001,MobileNetV3 Static INT8 PTQ,mobilenet_adaptive,0.9594,1.02,ACCEPTABLE,True,1855816,69.69,62.653,-2006.82,15.96,98.98,0.668989,20.41
+cand_002,MobileNetV3 INT8 PTQ + Magnitude Pruning,mobilenet_adaptive,0.9594,1.02,ACCEPTABLE,True,1855816,69.69,63.058,-2020.46,15.86,98.98,0.668989,20.09
+cand_003,MobileNetV3 INT8 + Adaptive Sparse RLE Packaging,mobilenet_adaptive,0.9594,1.02,ACCEPTABLE,True,1855816,69.69,125.522,-4120.93,7.97,98.98,0.668989,27.6
+cand_004,MobileNetV3 XNNPACK-Compatible INT8,XNNPACK_COMPATIBLE_INT8,0.9543,1.52,ACCEPTABLE,True,1855816,69.69,4.502,-51.39,222.12,97.97,0.666371,6.54

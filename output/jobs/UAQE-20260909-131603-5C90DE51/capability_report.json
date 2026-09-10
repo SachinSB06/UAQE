@@ -1,0 +1,21 @@
+{
+  "model_path": "D:\\Quantization embedded\\output\\jobs\\UAQE-20260909-131603-5C90DE51\\inputs\\model\\mobilenetv3_sem.onnx",
+  "format": "onnx",
+  "framework": "ONNX",
+  "architecture": "MobileNetV3-Small",
+  "supported": true,
+  "adapter": "ONNXModelAdapter",
+  "reason": "Model architecture and format fully supported by adapter",
+  "supported_optimization_modes": [
+    "supports_int8",
+    "supports_fp16",
+    "supports_pruning",
+    "supports_sparse",
+    "supports_rle",
+    "supports_clustering",
+    "supports_runtime_reconstruction",
+    "supports_classifier_adaptation",
+    "supports_export_tflite",
+    "supports_export_uaqe"
+  ]
+}

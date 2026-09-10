@@ -58,6 +58,26 @@ src/reports/
 src/scratch/
 *.log
 
+# ── CI Regression Test Fixtures ──────────────────────────────────────────────
+# The two historical job directories below are authoritative regression fixtures
+# required by the backend test suites in tests/. They must be committed so that
+# GitHub Actions (clean checkout) can run the tests without a live UAQE run.
+# Large dataset images (inputs/) and redundant model_fp32.onnx are excluded.
+!output/
+!output/jobs/
+!output/jobs/UAQE-20260909-131603-5C90DE51/
+!output/jobs/UAQE-20260909-131603-5C90DE51/**
+output/jobs/UAQE-20260909-131603-5C90DE51/inputs/
+output/jobs/UAQE-20260909-131603-5C90DE51/model_fp32.onnx
+!output/jobs/UAQE-20260909-191140-11AA370D/
+!output/jobs/UAQE-20260909-191140-11AA370D/**
+output/jobs/UAQE-20260909-191140-11AA370D/inputs/
+output/jobs/UAQE-20260909-191140-11AA370D/model_fp32.onnx
+# Standalone XNNPACK model used by test_candidate_latency_provenance.py (test 13)
+!output/phase_xnnpack/
+!output/phase_xnnpack/models/
+!output/phase_xnnpack/models/mobilenetv3_sem_9class_xnnpack_int8.tflite
+
 # Sensitive environment configuration & secrets
 .env
 .env.local

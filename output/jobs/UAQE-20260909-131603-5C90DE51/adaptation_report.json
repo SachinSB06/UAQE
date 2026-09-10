@@ -1,0 +1,18 @@
+{
+  "adapted": true,
+  "architecture": "MobileNetV3-Small",
+  "original_classifier": "Linear(1024, 10)",
+  "adapted_classifier": "Linear(1024, 9)",
+  "original_output_classes": 10,
+  "new_output_classes": 9,
+  "adaptation_reason": "Pretrained model has 10 output classes; target dataset has 9 classes.",
+  "adaptation_method": "Reconstruct backbone and replace final Linear(1024, 10) with Linear(1024, 9)",
+  "adaptation_supported": true,
+  "adaptation_verified": true,
+  "parameter_count_before": 1522050,
+  "parameter_count_after": 1527081,
+  "checkpoint_mode": "USER_UPLOAD",
+  "weight_source": "TRAINED_ADAPTATION",
+  "adaptation_status": "TRAINED_ADAPTATION",
+  "adaptation_note": "Adapted MobileNetV3 with semiconductor trained architecture weights."
+}

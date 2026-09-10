@@ -1,0 +1,25 @@
+{
+  "compatible": true,
+  "task": "image_classification",
+  "model_architecture": "MobileNetV3-Small",
+  "dataset_format": "image_folder",
+  "input_alignment": {
+    "model_layout": "NCHW",
+    "model_channels": 3,
+    "model_target_resolution": [
+      128,
+      128
+    ],
+    "resolution_adaptable": true
+  },
+  "class_alignment": {
+    "model_classes": 10,
+    "dataset_classes": 9,
+    "classes_match": false,
+    "adaptation_required": true
+  },
+  "issues": [],
+  "warnings": [
+    "Class count mismatch: Model outputs 10 logits, but dataset has 9 classes."
+  ]
+}

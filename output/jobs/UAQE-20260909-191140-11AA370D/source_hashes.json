@@ -1,0 +1,6 @@
+{
+  "model_path": "D:\\Quantization embedded\\output\\jobs\\UAQE-20260909-191140-11AA370D\\inputs\\model\\mobilenetv3_sem.onnx",
+  "model_sha256": "616f53f5ef2a66e7028e075d2af204b20067ededffdf550a7696fdc476242711",
+  "dataset_path": "D:\\Quantization embedded\\output\\jobs\\UAQE-20260909-191140-11AA370D\\inputs\\dataset",
+  "timestamp": "2026-09-09T19:11:43.486853"
+}
